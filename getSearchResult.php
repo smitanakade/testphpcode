@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
           }
         $html.= '<div class="main" id="main">'.
         '<a href="/Leader/content/'.$row_sub['articalFolder'].'/index.html#/id/'.$row_sub['pageId'].'" style="text-decoration: none; color:#000;"> '.
-        '<img  src="/Leader/assets/images/'. $row_sub['imageName']. '" style="max-width:100%" >'.
+        '<img  src="/myer/Leader/assets/images/'. $row_sub['imageName']. '" style="max-width:100%" >'.
         '<h2 class="subtitle">'.$row_sub['strapline'].'</h2>'.
         '<h1 class="headLine2"style="text-decoration: underline;">'.$row_sub['Title'].'</h1>'.                                    
         '<p style="text-align:center;padding:5px;font-family:ApercuLight;">'.$row_sub['Description']. '</p></a>'.

@@ -1,4 +1,4 @@
-
+/*
 
 @media only screen and (max-width : 1030px)
 	{  
@@ -20,7 +20,51 @@
 	.btn-menu2		{padding: 9px 0px 9px 20px;border-top:1px dotted #888888;width:100%;margin-right:0%;max-width:900px;}
     
 	}
-	
+*/
+
+@media only screen and (max-width : 1800px) {
+
+    div.menu-child {
+        margin-left: 10%;
+        width: 90%;
+        font-size: 8px;
+        max-width: 790px;
+    }
+}
+
+    @media only screen and (max-width : 1030px) {
+        div.menu-child {
+            margin-left: 10%;
+            width: 90%;
+            font-size: 8px;
+        }
+    }
+
+
+    @media only screen and (max-width : 768px) {
+        div.menu-child {
+            margin-left: 20%;
+            width: 95%;
+            font-size: 8px;
+        }
+    }
+
+    @media only screen and (max-width : 640px) {
+        div.menu-child {
+            margin-left: 20%;
+            width: 100%;
+            font-size: 8px;
+        }
+    }
+
+    .btn-menu2 {
+        padding: 9px 0px 9px 20px;
+        border-top: 1px dotted #888888;
+        width: 100%;
+        margin-right: 0%;
+        margin-left: 1%;
+        max-width: 900px;
+    }
 @media only screen and (max-width : 500px)
 	{  
 	.hide500		{display:none}

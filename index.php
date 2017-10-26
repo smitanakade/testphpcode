@@ -8,24 +8,26 @@
     <meta name="format-detection" content="telephone=no">
     <title>Myer Academy</title>
 
-    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>
+    <link href="/myer/Leader/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/Leader/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/Leader/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/Leader/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/Leader/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/Leader/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/myer/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/myer/Leader/assets/css/menu.css" rel="stylesheet" type="text/css" />
 
-    <script src="/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
-    <script src="/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
-    <script src="/Leader/assets/js/leaderDynamicMenu.js"type="text/javascript" ></script>
-    <script src="/Leader/assets/js/Leadersearch.js"></script>
-    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-    <script src="/Leader/assets/js/contentPage.js"></script>
-<!--     <script src="/Leader/assets/js/getActivity.js"></script>
+    <script src="/myer/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
+    <script src="/myer/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
+    <script src="/myer/Leader/assets/js/leaderDynamicMenu.js"type="text/javascript" ></script>
+    <script src="/myer/Leader/assets/js/Leadersearch.js"></script>
+    <link href="/myer/Leader/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="/myer/Leader/assets/js/contentPage.js"></script>
+	<script type="application/javascript" src="/myer/Leader/assets/js/menu.js"></script>
+<!--     <script src="/myer/Leader/assets/js/getActivity.js"></script>
  -->
  <script>
 $(document).ready(function() {
@@ -43,7 +45,7 @@ $(document).ready(function() {
             z-index: 10005;
         }
         .loading .loading-image {
-            background-image: url('/assets/images/loader.gif');
+            background-image: url('/myer/Leader/assets/images/loader.gif');
         }
     </style>
 
@@ -71,40 +73,196 @@ $(document).ready(function() {
 <div class="menustatus"></div>
 
 <div id="mainmenu" align="left">
-    <div class="btn-menu" style="padding:0px 0px 10px 0px;border:0px;">
-        <a href="mailto:myeracademy@myer.com.au" class="lnkmenu">
-            <img src="/assets/images/icon-email.png" style="margin:0px 10px 0px -4px;display:inline-block;border:0px"
-                 align="absmiddle">
-        </a>
-        <a href="index.html"
-           class="lnkmenu">
-            <img src="/assets/images/icon_myer.png" style="margin:0px 10px 0px 0px;display:inline-block;border:0px"
-                 align="absmiddle">
-        </a>
-        <img src="/assets/images/icon-info.png" style="margin:0px;display:inline-block;" align="absmiddle"
-             onclick="scrolltoabout(),openmenu()" class="pointer">
-        <img src="/assets/images/icon-logout.png" style="margin:0px 10px;display:inline-block;cursor: pointer"
-             align="absmiddle" onclick="logout()">
-        <br>
+    
+	<div align="center" style="max-width:100%;min-height:70px;">
+	
+		<div class="beforeTopHeader">
+			<div class="topHeader">
+				<ul class="nav navbar-nav">
+					<li class="text-center">
+						<a href="/Leader/index.php"><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
+					</li>
+					<li class="text-center">
+						<a href="mailto:myeracademy@myer.com.au"><i class="fa fa-lg fa-envelope-o"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">GET IN TOUCH</span></a>
+					</li>
+					<li class="text-center">
+						<a href="#" onclick="logout()"><i class="fa fa-lg fa-sign-out"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">SIGN OUT</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-    </div>
+		<form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="/myer/Leader/index.php">
+			<div style="max-width:80%;">
+			<div class="input-group add-on">
+			<input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+			  <div class="input-group-btn">
+				<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+			  </div>
+			</div>
+			</div>
+		<br>
+		<div class="spacer20"></div>
+		</form>
+
+	</div>
     <div class="scrollcontainer scrollheight2">
         <div class="scrollpanel">
             <div id="mainmenuinner" style="max-width:1200px;width:100%">
-                <div class="btn-menu"
-                     style="color:rgba(255,255,255,1);padding:18px 0px 18px 20px;border:0px;background:url('/assets/images/bullet-off.png') no-repeat left center;cursor:pointer;"
-                     onclick="scrolltoabout(),openmenu()">ABOUT MYER ACADEMY
-                </div>
+
+
                 <!-- dynamicMenu here adding menu dynamically added by SMITA RXP-->
-                <div class="dynamicMenu"></div>
+                <div class="dynamicMenu">
+					<a href="#" class="menu-container">
+						<div class="btn-menu2">ADD ON SELLING</div>
+						<div class="menu-child">
+							<a href="/content/add-on-selling/index.html" class="lnkmenu">
+								<div class="btn-menu2">ADD ON SELLING 1</div>
+							</a>
+							<a href="/content/add-on-selling/index.html" class="lnkmenu">
+								<div class="btn-menu2">ADD ON SELLING 2</div>
+							</a>
+						</div>
+					</a>
+
+					<a href="#" class="menu-container">
+						<div class="btn-menu2">ARE YOU LISTENING</div>
+						<div class="menu-child">
+							<a href="/content/asilio/index.html" class="lnkmenu">
+								<div class="btn-menu2">ASILIO</div>
+							</a>
+							<a href="/content/basque/index.html" class="lnkmenu">
+								<div class="btn-menu2">BASQUE</div>
+							</a>
+							<a href="/content/blaq/index.html" class="lnkmenu">
+								<div class="btn-menu2">BLAQ</div>
+							</a>
+
+						</div>
+					</a>
+					<a href="/content/bra-fitting-etiquette/index.html" class="lnkmenu">
+						<div class="btn-menu2">BRA FITTING ETIQUETTE</div>
+					</a>
+					<a href="/content/breast-anatomy-and-bra-construction/index.html" class="lnkmenu">
+						<div class="btn-menu2">BREAST ANATOMY AND BRA CONSTRUCTION</div>
+					</a>
+					<a href="/content/building-rapport-credibility/index.html" class="lnkmenu">
+						<div class="btn-menu2">BUILDING RAPPORT &amp; CREDIBILITY</div>
+					</a>
+					<a href="/content/your_personal_brand/index.html" class="lnkmenu">
+						<div class="btn-menu2">BUILDING YOUR PERSONAL BRAND</div>
+					</a>
+					<a href="/content/christmas-trim/index.html" class="lnkmenu">
+						<div class="btn-menu2">CHRISTMAS TRIM</div>
+					</a>
+					<a href="/content/choosing-the-right-bra/index.html" class="lnkmenu">
+						<div class="btn-menu2">CHOOSING THE RIGHT BRA</div>
+					</a>
+					<a href="/content/classic-footwear-brands/index.html" class="lnkmenu">
+						<div class="btn-menu2">CLASSIC FOOTWEAR BRANDS</div>
+					</a>     
+					<a href="/content/commbank/index.html" class="lnkmenu">
+						<div class="btn-menu2">COMMBANK AWARDS POINTS</div>
+					</a>
+					<a href="/content/converting-sales/index.html" class="lnkmenu">
+						<div class="btn-menu2">CONVERTING SALES</div>
+					</a>
+					<a href="/content/cooper-street/index.html" class="lnkmenu">
+						<div class="btn-menu2">COOPER STREET</div>
+					</a>
+					<a href="/content/delight/index.html" class="lnkmenu">
+						<div class="btn-menu2">DELIGHT</div>
+					</a>
+					<a href="/content/denimmen/index.html" class="lnkmenu">
+						<div class="btn-menu2">DENIM FOR MEN</div>
+					</a>
+					<a href="/content/denimwomen/index.html" class="lnkmenu">
+						<div class="btn-menu2">DENIM FOR WOMEN</div>
+					</a>
+					<a href="/content/fitting-a-bra/index.html" class="lnkmenu">
+						<div class="btn-menu2">FITTING A BRA</div>
+					</a>
+					<a href="/content/construction/index.html" class="lnkmenu">
+						<div class="btn-menu2">FOOTWEAR CONSTRUCTION</div>
+					</a>
+					<a href="/content/sizes_trends/index.html" class="lnkmenu">
+						<div class="btn-menu2">FOOTWEAR SIZES &amp; TRENDS</div>
+					</a>
+					<a href="/content/give_registry/index.html" class="lnkmenu">
+						<div class="btn-menu2">GIVE REGISTRY</div>
+					</a>
+					<a href="/content/growth-mindset/index.html" class="lnkmenu">
+						<div class="btn-menu2">GROWTH MINDSET</div>
+					</a>
+					<a href="/content/howwebuy/index.html" class="lnkmenu">
+						<div class="btn-menu2">HOW WE BUY</div>
+					</a>
+					<a href="/content/howwelearn/index.html" class="lnkmenu">
+						<div class="btn-menu2">HOW WE LEARN AT MYER</div>
+					</a>
+					<a href="/content/intimate-apparel-care-and-solutions/index.html" class="lnkmenu">
+						<div class="btn-menu2">INTIMATE APPAREL CARE AND SOLUTIONS</div>
+					</a>
+					<a href="/content/intro-to-shrinkage/index.html" class="lnkmenu">
+						<div class="btn-menu2">INTRODUCTION TO SHRINKAGE AT MYER</div>
+					</a>
+					<a href="/content/jack_jones/index.html" class="lnkmenu">
+						<div class="btn-menu2">JACK &amp; JONES</div>
+					</a>
+					<a href="/content/kenji/index.html" class="lnkmenu">
+						<div class="btn-menu2">KENJI</div>
+					</a>
+					<a href="/content/leona-by-leona-edmiston/index.html" class="lnkmenu">
+						<div class="btn-menu2">LEONA BY LEONA EDMISTON</div>
+					</a>
+					<a href="/content/myer-credit-card/index.html" class="lnkmenu">
+						<div class="btn-menu2">MYER CREDIT CARD</div>
+					</a> 
+					<a href="/content/on-trend/index.html" class="lnkmenu">
+						<div class="btn-menu2">ON TREND FOR SPRING RACING</div>
+					</a>                
+					<a href="/content/piper/index.html" class="lnkmenu">
+						<div class="btn-menu2">PIPER</div>
+					</a>
+					<a href="/content/race-day-outfits/index.html" class="lnkmenu">
+						<div class="btn-menu2">RACE DAY OUTFITS</div>
+					</a>
+					<a href="/content/reserve/index.html" class="lnkmenu">
+						<div class="btn-menu2">RESERVE</div>
+					</a>
+					<a href="/content/denimcare/index.html" class="lnkmenu">
+						<div class="btn-menu2">RULES OF DENIM CARE</div>
+					</a>
+					<a href="/content/sales-metrics/index.html" class="lnkmenu">
+						<div class="btn-menu2">SALES METRICS</div>
+					</a>
+					<a href="/content/stella/index.html" class="lnkmenu">
+						<div class="btn-menu2 btn-bord-bot">STELLA</div>
+					</a>
+					<a href="/content/styling-with-colour/index.html" class="lnkmenu">
+						<div class="btn-menu2 btn-bord-bot">STYLING WITH COLOR</div>
+					</a>
+					<a href="/content/styling-with-neutrals/index.html" class="lnkmenu">
+						<div class="btn-menu2 btn-bord-bot">STYLING WITH NEUTRALS</div>
+					</a>
+					<a href="/content/the-bra-wardrobe/index.html" class="lnkmenu">
+						<div class="btn-menu2 btn-bord-bot">THE BRA WARDROBE</div>
+					</a>
+					<a href="/content/wayne_cooper/index.html" class="lnkmenu">
+						<div class="btn-menu2 btn-bord-bot">WAYNE COOPER</div>
+					</a>
+					<a href="/content/youngandcontemporary/index.html" class="lnkmenu">
+						<div class="btn-menu2 btn-bord-bot">YOUNG &amp; CONTEMPORARY FOOTWEAR</div>
+					</a>
+
+				</div>
                 <!-- dynamicMenu here adding menu dynamically added by SMITA RXP -->
 
-               
             </div>
         </div>
     </div>
     <div style="width:100%;max-width:1200px;height:35px;margin-top:10px;display:block;background:rgba(156,156,156,0);cursor:pointer"
-         align="center" onclick="openmenu()"><img src="/assets/images/arrow_up2.png"
+         align="center" onclick="openmenu()"><img src="/myer/Leader/assets/images/arrow_up2.png"
                                                   style="margin:5px 0px 0px 0px;cursor:pointer;width:55px"></div>
 
 
@@ -112,17 +270,17 @@ $(document).ready(function() {
 
 
 <div class="menu pointer" align="center" onclick="openmenu()">
-    <!-- <img src="/Leader/assets/images/hamburger1.png" style="width:26px;float:left;margin:13px 0px 0px 10px"> -->
+    <!-- <img src="/myer/Leader/assets/images/hamburger1.png" style="width:26px;float:left;margin:13px 0px 0px 10px"> -->
     
     <a href="#" class="bar" ><i class="fa fa-bars fa-2x" aria-hidden="true" ></i></a>
 
-    <img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
+    <img src="/myer/Leader/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
 </div>
 
 
 <div align="center">
 
-    <div style="max-width:100%;min-height:70px;border-bottom:1px solid #000;"><img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" ></div>
+<div id="ddddd" style="max-width:100%;min-height:70px;border-bottom:1px solid #000;"><img src="/myer/Leader/assets/images/592fabe4ab4951b364eb10eb.jpeg" ></div>
 <div class="beforeTopHeader">
 <div class="topHeader">
         <ul class="nav navbar-nav">
@@ -206,7 +364,7 @@ if(isset($_GET['fl'])){
                         $link="/Leader/PDF/".$row['Links'];
                     }  ?>
                     <div class="main" id="main"><a href='<?php echo $link;?>' target="_blank" style="text-decoration: none; color:#000;"> 
-                        <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >
+                        <img  src="/myer/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >
                         <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
                         <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
                         <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p></a>
@@ -241,22 +399,22 @@ if(isset($_GET['fl'])){
             <div style="max-width:1600px;">
             <a href="/Leader/Leader.php?pg=LEADING SELF" >
                 <div  class="LeaderHome">
-                    <img src="/Leader/assets/images/LEADINGSELF.jpg" style="max-width:100%;">
+                    <img src="/myer/Leader/assets/images/LEADINGSELF.jpg" style="max-width:100%;">
                 </div>
             </a> 
             <a href="/Leader/Leader.php?pg=LEADING OTHERS">
                 <div  class="LeaderHome">
-                       <img src="/Leader/assets/images/LEADINGOTHERS.jpg" style="max-width:100%;">
+                       <img src="/myer/Leader/assets/images/LEADINGOTHERS.jpg" style="max-width:100%;">
                 </div>  
             </a> 
             <a href="/Leader/Leader.php?pg=WORKING ON THE BUSINES">
                 <div  class="LeaderHome">
-                    <img src="/Leader/assets/images/WORKINGONTHEBUSINES.jpg" style="max-width:100%;">
+                    <img src="/myer/Leader/assets/images/WORKINGONTHEBUSINES.jpg" style="max-width:100%;">
                  </div>
             </a> 
             <a href="/Leader/Leader.php?pg=WORKING IN THE BUSINESS">
                 <div  class="LeaderHome">
-                    <img src="/Leader/assets/images/WORKINGINTHEBUSINESS.jpg" style="max-width:100%;">
+                    <img src="/myer/Leader/assets/images/WORKINGINTHEBUSINESS.jpg" style="max-width:100%;">
                 </div>
             </a> 
                 
@@ -335,20 +493,20 @@ if(isset($_GET['fl'])){
               
          <div id="footer">
             &copy 2016 www.myeracademy.com.au<br><br>
-            <img src="/assets/images/arrow_up.png" style="margin:20px 0px" class="pointer" onclick="scrolltotop()">
+            <img src="/myer/Leader/assets/images/arrow_up.png" style="margin:20px 0px" class="pointer" onclick="scrolltotop()">
         </div> 
 
 
     </div>
 </div>
 
-<script type="application/javascript" src="/assets/js/config.js"></script>
-<script type="text/javascript" src="/assets/js/functions.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-2.1.3.min.js"></script>
-<script src="/assets/js/jquery.swipeshow.min.js"></script>
-<script type="application/javascript" src="/assets/js/es6-promise-polyfill.js"></script>
-<script type="application/javascript" src="/assets/js/axios.js"></script>
-<script type="application/javascript" src="/assets/js/stafflogin.js"></script>
+<script type="application/javascript" src="/myer/Leader/assets/js/config.js"></script>
+<script type="text/javascript" src="/myer/Leader/assets/js/functions.js"></script>
+<script type="text/javascript" src="/myer/Leader/assets/js/jquery-2.1.3.min.js"></script>
+<script src="/myer/Leader/assets/js/jquery.swipeshow.min.js"></script>
+<script type="application/javascript" src="/myer/Leader/assets/js/es6-promise-polyfill.js"></script>
+<script type="application/javascript" src="/myer/Leader/assets/js/axios.js"></script>
+<script type="application/javascript" src="/myer/Leader/assets/js/stafflogin.js"></script>
 
 <script>
 
@@ -362,30 +520,11 @@ if(isset($_GET['fl'])){
     })
 
     $(document).ready(function () {
+		initMenu();
         $(this).scroll(function () {
-            var pagew = window.innerWidth;
-            var sheight = $(window).scrollTop();
-            if (sheight >= 300) {
-                $('.menu').css("background", "rgb(255, 255, 255)");
-                $('.menu').css("box-shadow", "0px 0px 15px rgba(0,0,0,.7)");
-                $('.logo-myeracademy2').css("opacity", "1");
-            }
-
-            else {
-                $('.menu').css("background", "rgba(0,0,0,0)");
-                $('.logo-myeracademy2').css("opacity", "0");
-                $('.menu').css("box-shadow", "0px 0px 15px rgba(0,0,0,0)")
-            }
-
-            if (sheight >= 150) {
-                if (pagew <= 640) {
-
-                    $('.menu').css("background", "rgb(255, 255, 255)");
-                    $('.menu').css("box-shadow", "0px 0px 15px rgba(0,0,0,.7)");
-                    $('.logo-myeracademy2').css("opacity", "1");
-                }
-            }
+            scrollPage();
         });
+
     });
 
     $(window).load(function () {
@@ -412,13 +551,13 @@ if(isset($_GET['fl'])){
     }
 
     function redirect() {
-        document.location.href = '/index.html';
+    //    document.location.href = './index.html';
     }
 
 
     function logout() {
-        loginCheck.logout();
-        redirect();
+       // loginCheck.logout();
+       // redirect();
     }
 
     (function (i, s, o, g, r, a, m) {
