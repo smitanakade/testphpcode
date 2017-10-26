@@ -74,7 +74,7 @@ $(document).ready(function() {
 
 <div id="mainmenu" align="left">
     
-	<div align="center" style="max-width:100%;min-height:70px;">
+	<div align="center">
 	
 		<div class="beforeTopHeader">
 			<div class="topHeader">
@@ -113,17 +113,24 @@ $(document).ready(function() {
 
                 <!-- dynamicMenu here adding menu dynamically added by SMITA RXP-->
                 <div class="dynamicMenu">
-					<a href="#" class="menu-container">
-						<div class="btn-menu2">ADD ON SELLING</div>
-						<div class="menu-child">
-							<a href="/content/add-on-selling/index.html" class="lnkmenu">
-								<div class="btn-menu2">ADD ON SELLING 1</div>
-							</a>
-							<a href="/content/add-on-selling/index.html" class="lnkmenu">
-								<div class="btn-menu2">ADD ON SELLING 2</div>
-							</a>
-						</div>
-					</a>
+
+
+
+				<a href="#" class="menu-container-main">
+					<div class="btn-menu2">MAIN CATEGORY</div>
+				</a>
+				<a href="#" class="menu-container">
+					<div class="btn-menu2">ADD ON SELLING</div>
+					<div class="menu-child">
+						<a href="/content/add-on-selling/index.html" class="lnkmenu">
+							<div class="btn-menu2">ADD ON SELLING 1</div>
+						</a>
+						<a href="/content/add-on-selling/index.html" class="lnkmenu">
+							<div class="btn-menu2">ADD ON SELLING 2</div>
+						</a>
+					</div>
+				</a>
+				
 
 					<a href="#" class="menu-container">
 						<div class="btn-menu2">ARE YOU LISTENING</div>
@@ -143,6 +150,7 @@ $(document).ready(function() {
 					<a href="/content/bra-fitting-etiquette/index.html" class="lnkmenu">
 						<div class="btn-menu2">BRA FITTING ETIQUETTE</div>
 					</a>
+
 					<a href="/content/breast-anatomy-and-bra-construction/index.html" class="lnkmenu">
 						<div class="btn-menu2">BREAST ANATOMY AND BRA CONSTRUCTION</div>
 					</a>
@@ -158,6 +166,7 @@ $(document).ready(function() {
 					<a href="/content/choosing-the-right-bra/index.html" class="lnkmenu">
 						<div class="btn-menu2">CHOOSING THE RIGHT BRA</div>
 					</a>
+					
 					<a href="/content/classic-footwear-brands/index.html" class="lnkmenu">
 						<div class="btn-menu2">CLASSIC FOOTWEAR BRANDS</div>
 					</a>     
@@ -167,6 +176,7 @@ $(document).ready(function() {
 					<a href="/content/converting-sales/index.html" class="lnkmenu">
 						<div class="btn-menu2">CONVERTING SALES</div>
 					</a>
+					
 					<a href="/content/cooper-street/index.html" class="lnkmenu">
 						<div class="btn-menu2">COOPER STREET</div>
 					</a>
@@ -254,7 +264,7 @@ $(document).ready(function() {
 					<a href="/content/youngandcontemporary/index.html" class="lnkmenu">
 						<div class="btn-menu2 btn-bord-bot">YOUNG &amp; CONTEMPORARY FOOTWEAR</div>
 					</a>
-
+					
 				</div>
                 <!-- dynamicMenu here adding menu dynamically added by SMITA RXP -->
 
@@ -520,7 +530,9 @@ if(isset($_GET['fl'])){
     })
 
     $(document).ready(function () {
+		//$(".dynamicMenu").html(parseMenu());
 		initMenu();
+		
         $(this).scroll(function () {
             scrollPage();
         });
