@@ -65,6 +65,9 @@ $(document).ready(function() {
 
     <?php // include_once("analyticstracking.php") ?>
 
+	<?php 
+		$jsonMenu = file_get_contents('http://52.65.147.55/webapi/content.php');
+	?>
 
 </head>
 
@@ -115,7 +118,7 @@ $(document).ready(function() {
                 <div class="dynamicMenu">
 
 
-
+<!--
 				<a href="#" class="menu-container-main">
 					<div class="btn-menu2">MAIN CATEGORY</div>
 				</a>
@@ -264,7 +267,7 @@ $(document).ready(function() {
 					<a href="/content/youngandcontemporary/index.html" class="lnkmenu">
 						<div class="btn-menu2 btn-bord-bot">YOUNG &amp; CONTEMPORARY FOOTWEAR</div>
 					</a>
-					
+					-->
 				</div>
                 <!-- dynamicMenu here adding menu dynamically added by SMITA RXP -->
 
@@ -530,8 +533,10 @@ if(isset($_GET['fl'])){
     })
 
     $(document).ready(function () {
-		//$(".dynamicMenu").html(parseMenu());
+	
+		$(".dynamicMenu").html(parseMenu('<?php echo $jsonMenu?>'));
 		initMenu();
+		
 		
         $(this).scroll(function () {
             scrollPage();

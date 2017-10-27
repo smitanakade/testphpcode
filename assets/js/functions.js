@@ -76,11 +76,11 @@ function resize()			{  	  var pageh=window.innerHeight;
 								  
 								  
 								  var menuh = 	$('#mainmenuinner').height();
-								  var menuh2 = menuh+165;
+								  var menuh2 = menuh+300;
 								  $('#mainmenu').css("height",menuh2);
 								  
 								  if (pageh <= menuh2) {
-									  var pageh4=window.innerHeight-165;
+									  var pageh4=window.innerHeight-300;
 								  $('.scrollheight2').css("height",pageh4);
 									  }
 									else {$('.scrollheight2').css("height",menuh);}  

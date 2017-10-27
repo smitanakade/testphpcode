@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\css"
+    "\\assets\\css",
+    "\\assets\\js"
   ],
-  "SelectedNode": "\\index.php",
+  "SelectedNode": "\\assets\\css\\styles_resp.css",
   "PreviewInSolutionExplorer": false
 }
