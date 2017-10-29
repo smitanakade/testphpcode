@@ -10,14 +10,14 @@
     <meta name="format-detection" content="telephone=no">
     <title>Myer Academy</title>
 
-    <link href="/myer/Leader/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/myer/Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/fonts.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>
+    <link href="/myer/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/myer/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>
  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="/myer/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <?php //include_once("dbconnect.php");?>
@@ -34,17 +34,17 @@
 <div id="mainmenu" align="left">
     <div class="btn-menu" style="padding:0px 0px 10px 0px;border:0px;">
         <a href="mailto:myeracademy@myer.com.au" class="lnkmenu">
-            <img src="/myer/Leader/assets/images/icon-email.png" style="margin:0px 10px 0px -4px;display:inline-block;border:0px"
+            <img src="/myer/assets/images/icon-email.png" style="margin:0px 10px 0px -4px;display:inline-block;border:0px"
                  align="absmiddle">
         </a>
         <a href="index.html"
            class="lnkmenu">
-            <img src="/myer/Leader/assets/images/icon_myer.png" style="margin:0px 10px 0px 0px;display:inline-block;border:0px"
+            <img src="/myer/assets/images/icon_myer.png" style="margin:0px 10px 0px 0px;display:inline-block;border:0px"
                  align="absmiddle">
         </a>
-        <img src="/myer/Leader/assets/images/icon-info.png" style="margin:0px;display:inline-block;" align="absmiddle"
+        <img src="/myer/assets/images/icon-info.png" style="margin:0px;display:inline-block;" align="absmiddle"
              onclick="scrolltoabout(),openmenu()" class="pointer">
-        <img src="/myer/Leader/assets/images/icon-logout.png" style="margin:0px 10px;display:inline-block;cursor: pointer"
+        <img src="/myer/assets/images/icon-logout.png" style="margin:0px 10px;display:inline-block;cursor: pointer"
              align="absmiddle" onclick="logout()">
         <br>
 
@@ -53,7 +53,7 @@
         <div class="scrollpanel">
             <div id="mainmenuinner" style="max-width:1200px;width:100%">
                 <div class="btn-menu"
-                     style="color:rgba(255,255,255,1);padding:18px 0px 18px 20px;border:0px;background:url('/myer/Leader/assets/images/bullet-off.png') no-repeat left center;cursor:pointer;"
+                     style="color:rgba(255,255,255,1);padding:18px 0px 18px 20px;border:0px;background:url('/myer/assets/images/bullet-off.png') no-repeat left center;cursor:pointer;"
                      onclick="scrolltoabout(),openmenu()">ABOUT MYER ACADEMY
                 </div>
                 <br>
@@ -191,7 +191,7 @@
         </div>
     </div>
     <div style="width:100%;max-width:1200px;height:35px;margin-top:10px;display:block;background:rgba(156,156,156,0);cursor:pointer"
-         align="center" onclick="openmenu()"><img src="/myer/Leader/assets/images/arrow_up2.png"
+         align="center" onclick="openmenu()"><img src="/myer/assets/images/arrow_up2.png"
                                                   style="margin:5px 0px 0px 0px;cursor:pointer;width:55px"></div>
 
 
@@ -199,8 +199,8 @@
 
 
 <div class="menu pointer" align="center" onclick="openmenu()">
-    <img src="/myer/Leader/assets/images/hamburger.png" style="width:26px;float:left;margin:13px 0px 0px 10px">
-    <img src="/myer/Leader/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
+    <img src="/myer/assets/images/hamburger.png" style="width:26px;float:left;margin:13px 0px 0px 10px">
+    <img src="/myer/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
 </div>
 
 
@@ -235,7 +235,7 @@
         <span style="font-family: 'MillerBanner-Roman';font-size:22px;line-height:2px;text-transform:uppercase; margin:10px;">What am I doing today?</span>
    </div>
             <div style="max-width:1600px;">
-    <!--         <a href="myer-credit-card/index.html"><div class="tilewrap" style="background-image: url(/myer/Leader/assets/images/slider01.jpg); height: 401.5px;">
+    <!--         <a href="myer-credit-card/index.html"><div class="tilewrap" style="background-image: url(/myer/assets/images/slider01.jpg); height: 401.5px;">
                     <div class="tileinner">
                         <div class="tile-valign">
                             <div class="spacer60"></div>
@@ -266,20 +266,20 @@
 
         <div id="footer">
             &copy 2016 www.myeracademy.com.au<br><br>
-            <img src="/myer/Leader/assets/images/arrow_up.png" style="margin:20px 0px" class="pointer" onclick="scrolltotop()">
+            <img src="/myer/assets/images/arrow_up.png" style="margin:20px 0px" class="pointer" onclick="scrolltotop()">
         </div>
 
 
     </div>
 </div>
 
-<script type="application/javascript" src="/myer/Leader/assets/js/config.js"></script>
-<script type="text/javascript" src="/myer/Leader/assets/js/functions.js"></script>
-<script type="text/javascript" src="/myer/Leader/assets/js/jquery-2.1.3.min.js"></script>
-<script src="/myer/Leader/assets/js/jquery.swipeshow.min.js"></script>
-<script type="application/javascript" src="/myer/Leader/assets/js/es6-promise-polyfill.js"></script>
-<script type="application/javascript" src="/myer/Leader/assets/js/axios.js"></script>
-<script type="application/javascript" src="/myer/Leader/assets/js/stafflogin.js"></script>
+<script type="application/javascript" src="/myer/assets/js/config.js"></script>
+<script type="text/javascript" src="/myer/assets/js/functions.js"></script>
+<script type="text/javascript" src="/myer/assets/js/jquery-2.1.3.min.js"></script>
+<script src="/myer/assets/js/jquery.swipeshow.min.js"></script>
+<script type="application/javascript" src="/myer/assets/js/es6-promise-polyfill.js"></script>
+<script type="application/javascript" src="/myer/assets/js/axios.js"></script>
+<script type="application/javascript" src="/myer/assets/js/stafflogin.js"></script>
 
 <script>
 

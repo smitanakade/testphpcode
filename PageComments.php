@@ -21,14 +21,14 @@ if (!$result_like) {
 	}	
 }
 //taking page rating given by login user 
-$sql_rating = "SELECT rating FROM `articalactivity` WHERE PageId='". mysqli_real_escape_string($link,$_POST['PageID'])."' and UserId='". mysqli_real_escape_string($link,$_POST['UserId'])."'";
+$sql_rating = "SELECT comment FROM `articalactivity` WHERE PageId='". mysqli_real_escape_string($link,$_POST['PageID'])."'";
 $result_rating = mysqli_query($link,$sql_rating);
 if (!$result_rating) {
 	http_response_code(404);
 	die(mysqli_error());
 }else{
 	while ($row_like = mysqli_fetch_array($result_rating, MYSQL_BOTH)) {
-		$main_item["rating"]=$row_like["rating"];
+		$main_item["comment"]=$row_like["comment"];
 	}	
 }
 

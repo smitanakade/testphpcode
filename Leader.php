@@ -1,9 +1,9 @@
 <?php if(!$_GET['pg']){
     header("Location: /Leader/index.php");
     }else{
-        $ImageName = str_replace (' ', '', $_GET['pg']);
-        
+        $ImageName = str_replace (' ', '', $_GET['pg']);        
     }
+    include('db_connect.php');    
     ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -18,24 +18,24 @@
     <meta name="format-detection" content="telephone=no">
     <title>Myer Academy</title>
 
-    <link href="/myer/Leader/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/fonts.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="/myer/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-    <script src="/myer/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
-    <script src="/myer/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
-    <script src="/myer/Leader/assets/js/leaderDynamicMenu.js"type="text/javascript" ></script>
-    <script src="/myer/Leader/assets/js/Leadersearch.js"></script>
-    <link href="/myer/Leader/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-    <script src="/myer/Leader/assets/js/contentPage.js"></script>
-<!--     <script src="/myer/Leader/assets/js/getActivity.js"></script>
+    <script src="/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
+    <script src="/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
+    <script src="/Leader/assets/js/leaderDynamicMenu.js"type="text/javascript" ></script>
+    <script src="/Leader/assets/js/Leadersearch.js"></script>
+    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="/Leader/assets/js/contentPage.js"></script>
+<!--     <script src="/Leader/assets/js/getActivity.js"></script>
  -->
  <script>
 $(document).ready(function() {
@@ -54,7 +54,7 @@ $(document).ready(function() {
             z-index: 10005;
         }
         .loading .loading-image {
-            background-image: url('/myer/Leader/assets/images/loader.gif');
+            background-image: url('/assets/images/loader.gif');
         }
     </style>
 
@@ -82,17 +82,17 @@ $(document).ready(function() {
 <div id="mainmenu" align="left">
     <div class="btn-menu" style="padding:0px 0px 10px 0px;border:0px;">
         <a href="mailto:myeracademy@myer.com.au" class="lnkmenu">
-            <img src="/myer/Leader/assets/images/icon-email.png" style="margin:0px 10px 0px -4px;display:inline-block;border:0px"
+            <img src="/assets/images/icon-email.png" style="margin:0px 10px 0px -4px;display:inline-block;border:0px"
                  align="absmiddle">
         </a>
         <a href="index.html"
            class="lnkmenu">
-            <img src="/myer/Leader/assets/images/icon_myer.png" style="margin:0px 10px 0px 0px;display:inline-block;border:0px"
+            <img src="/assets/images/icon_myer.png" style="margin:0px 10px 0px 0px;display:inline-block;border:0px"
                  align="absmiddle">
         </a>
-        <img src="/myer/Leader/assets/images/icon-info.png" style="margin:0px;display:inline-block;" align="absmiddle"
+        <img src="/assets/images/icon-info.png" style="margin:0px;display:inline-block;" align="absmiddle"
              onclick="scrolltoabout(),openmenu()" class="pointer">
-        <img src="/myer/Leader/assets/images/icon-logout.png" style="margin:0px 10px;display:inline-block;cursor: pointer"
+        <img src="/assets/images/icon-logout.png" style="margin:0px 10px;display:inline-block;cursor: pointer"
              align="absmiddle" onclick="logout()">
         <br>
 
@@ -101,7 +101,7 @@ $(document).ready(function() {
     <div class="scrollpanel">
         <div id="mainmenuinner" style="max-width:1200px;width:100%">
             <div class="btn-menu"
-                 style="color:rgba(255,255,255,1);padding:18px 0px 18px 20px;border:0px;background:url('/myer/Leader/assets/images/bullet-off.png') no-repeat left center;cursor:pointer;"
+                 style="color:rgba(255,255,255,1);padding:18px 0px 18px 20px;border:0px;background:url('/assets/images/bullet-off.png') no-repeat left center;cursor:pointer;"
                  onclick="scrolltoabout(),openmenu()">ABOUT MYER ACADEMY
             </div>
             <!-- dynamicMenu here adding menu dynamically added by SMITA RXP-->
@@ -113,7 +113,7 @@ $(document).ready(function() {
     </div>
 </div>
     <div style="width:100%;max-width:1200px;height:35px;margin-top:10px;display:block;background:rgba(156,156,156,0);cursor:pointer"
-         align="center" onclick="openmenu()"><img src="/myer/Leader/assets/images/arrow_up2.png"
+         align="center" onclick="openmenu()"><img src="/assets/images/arrow_up2.png"
                                                   style="margin:5px 0px 0px 0px;cursor:pointer;width:55px"></div>
 
 
@@ -121,17 +121,17 @@ $(document).ready(function() {
 
 
 <div class="menu pointer" align="center" onclick="openmenu()">
-    <!-- <img src="/myer/Leader/assets/images/hamburger1.png" style="width:26px;float:left;margin:13px 0px 0px 10px"> -->
+    <!-- <img src="/Leader/assets/images/hamburger1.png" style="width:26px;float:left;margin:13px 0px 0px 10px"> -->
     
     <a href="#" class="bar" ><i class="fa fa-bars fa-2x" aria-hidden="true" ></i></a>
 
-    <img src="/myer/Leader/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
+    <img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
 </div>
 
 
 <div align="center">
 
-    <div style="max-width:100%;min-height:70px;border-bottom:1px solid #000;"><img src="/myer/Leader/assets/images/592fabe4ab4951b364eb10eb.jpeg" ></div>
+    <div style="max-width:100%;min-height:70px;border-bottom:1px solid #000;"><img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" ></div>
     <div class="beforeTopHeader">
     <div class="topHeader">
         <ul class="nav navbar-nav">
@@ -163,14 +163,28 @@ $(document).ready(function() {
   
     <br/>
     <div class="spacer20"></div>
-<!-- HeroImage START -->
-<!--<div class="slideshow swipeshow slidersize pointer" style="margin-top:0px;overflow:hidden">-->
-            <img src="/myer/Leader/assets/images/<?php echo $ImageName;?>.jpg" class="LeaderHeroImg">
-      
-<!--</div>-->
+<!-- HeroImage START genrating Hero image baised on mensu selection-->
+            <img src="/Leader/assets/images/<?php echo $ImageName;?>.jpg" class="LeaderHeroImg">
 <div class="LeaderHearoContent">
-            These learning moments have been crafted especially for your mobile device. Immerse yourself in the world we
-            love and take your&nbsp;moment&nbsp;to&nbsp;shine.
+<div class="spacer20"></div>
+<!-- Here Fetching content for particular category baised on menu selection  START-->
+<?php
+$sql_content="SELECT Content FROM ContentForCategory WHERE Category LIKE '%".$_GET['pg']."%'";
+if ($result_content = mysqli_query($link, $sql_content)) {
+    $rcount=mysqli_num_rows($result_content);
+    if($rcount){
+        /* fetch associative array */
+        while ($row = mysqli_fetch_row($result_content)) {
+            echo  $row[0];
+        }
+    }
+        /* free result set */
+        mysqli_free_result($result);
+    }
+?>
+<!-- Here Fetching content for particular category baised on menu selection   END-->
+
+
 </div>
         <!-- // Hero -->
         <div class="spacer20"></div>
@@ -188,6 +202,7 @@ $(document).ready(function() {
                         <option value='REFLECT'>REFLECT</option>
                         
                       </select>
+                      
                       </div>
   </form>
 
@@ -205,7 +220,6 @@ $(document).ready(function() {
                 
 <!-- Here Comment, Rating, like and read comment Part starting -->
 <?php 
-include('db_connect.php');
 if(isset($_GET['pg']) && !isset($_GET['fl'])){
     $Key=$_GET['pg'];
     $query= "SELECT pageId,Title,strapline,articalFolder,Description,Category,Filter,CapabilityTag,Keyword,SecondaryLeadership,imageName FROM leaderlearningmoment WHERE Category Like '%$Key%' ORDER BY pageRanking";
@@ -220,11 +234,11 @@ if(isset($_GET['pg']) && !isset($_GET['fl'])){
         if($rowcount){
             while ($row = mysqli_fetch_array($result, MYSQL_BOTH)) {
              ?>
-                <div class="main" id="main"><a href='/Leader/content/<?php echo $row['articalFolder']."/index.html#/id/". $row['pageId'];?>' style="text-decoration: none; color:#000;"> 
-                    <img  src="/myer/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >
+                <div class="main" id="main">
+                    <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>"  class="lmimage" >
                     <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
                     <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
-                    <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p></a>
+                    <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p>
                     <div style="margin:0 auto; border-bottom:1px dotted #000;max-width:80%;">
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-eye fa-stack-2x" aria-hidden="true"></i>
@@ -238,6 +252,9 @@ if(isset($_GET['pg']) && !isset($_GET['fl'])){
                             <i class="fa fa-comment fa-stack-2x"></i>
                             <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
                         </span>
+                        <br/>
+                        <a  href='/Leader/content/<?php echo $row['articalFolder']."/index.html#/id/". $row['pageId'];?>' target="_self" class="button_cust"> CONTINUE READING </a>   
+
 <!--                         <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
  -->                    </div>
                 </div>
@@ -248,8 +265,54 @@ if(isset($_GET['pg']) && !isset($_GET['fl'])){
             echo"NO Record Found!!";
         }
     }
-    
-}if(isset($_GET['pg']) && isset($_GET['fl'])){
+$query_fl= "SELECT Title,strapline,Description,Links,Category,Filter,CapabilityTag,Keyword,SecondaryLeadership,imageName FROM leaderassociation WHERE Category Like '%$Key%' ORDER BY Filter";
+ $result_fl = mysqli_query($link,$query_fl);
+
+    // die if SQL statement failed
+    if (!$result_fl) {
+    http_response_code(404);
+    }
+    else{
+        $rowcount=mysqli_num_rows($result_fl);
+        if($rowcount){
+            while ($row = mysqli_fetch_array($result_fl, MYSQL_BOTH)) {
+                 $pos = strpos($row['Links'], "pptx");
+                if($pos === false){
+                 $link=$row['Links'];
+                }else{
+                    $link="/Leader/PDF/".$row['Links'];
+                }  ?>
+                <div class="main" id="main">
+                    <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >
+                    <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
+                    <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
+                    <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p>
+                    <div style="margin:0 auto; border-bottom:1px dotted #000;max-width:80%;">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-eye fa-stack-2x" aria-hidden="true"></i>
+                            <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
+                        </span>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa fa-heart fa-stack-2x"></i>
+                            <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
+                        </span>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-comment fa-stack-2x"></i>
+                            <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
+                        </span><br/>
+                        <a href='<?php echo $link;?>' target="_blank" class="button_cust"> CONTINUE READING </a>   
+<!--                         <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
+ -->              
+                </div>
+ 
+                </div>
+        <?php
+            }
+        }
+        
+}
+}
+if(isset($_GET['pg']) && isset($_GET['fl'])){
 $fl= $_GET['fl'];
 $pg=$_GET['pg'];
     $query_fl= "SELECT Title,strapline,Description,Links,Category,Filter,CapabilityTag,Keyword,SecondaryLeadership,imageName FROM leaderassociation WHERE Filter Like '%$fl%' and Category Like '%$pg%' ORDER BY pageRanking";
@@ -269,11 +332,11 @@ $pg=$_GET['pg'];
                 }else{
                     $link="/Leader/PDF/".$row['Links'];
                 }  ?>
-                <div class="main" id="main"><a href='<?php echo $link;?>' target="_blank" style="text-decoration: none; color:#000;"> 
-                    <img  src="/myer/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >
+                <div class="main" id="main"> 
+                    <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >
                     <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
                     <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
-                    <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p></a>
+                    <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p>
                     <div style="margin:0 auto; border-bottom:1px dotted #000;max-width:80%;">
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-eye fa-stack-2x" aria-hidden="true"></i>
@@ -287,6 +350,9 @@ $pg=$_GET['pg'];
                             <i class="fa fa-comment fa-stack-2x"></i>
                             <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
                         </span>
+                        <br/>
+                        <a href='<?php echo $link;?>' target="_blank" class="button_cust"> CONTINUE READING </a>   
+
 <!--                         <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
  -->                    </div>
                 </div>
@@ -305,20 +371,20 @@ $pg=$_GET['pg'];
    
         <div id="footer">
             &copy 2016 www.myeracademy.com.au<br><br>
-            <img src="/myer/Leader/assets/images/arrow_up.png" style="margin:20px 0px" class="pointer" onclick="scrolltotop()">
+            <img src="/assets/images/arrow_up.png" style="margin:20px 0px" class="pointer" onclick="scrolltotop()">
         </div>
 
 
     </div>
 </div>
 
-<script type="application/javascript" src="/myer/Leader/assets/js/config.js"></script>
-<script type="text/javascript" src="/myer/Leader/assets/js/functions.js"></script>
-<script type="text/javascript" src="/myer/Leader/assets/js/jquery-2.1.3.min.js"></script>
-<script src="/myer/Leader/assets/js/jquery.swipeshow.min.js"></script>
-<script type="application/javascript" src="/myer/Leader/assets/js/es6-promise-polyfill.js"></script>
-<script type="application/javascript" src="/myer/Leader/assets/js/axios.js"></script>
-<script type="application/javascript" src="/myer/Leader/assets/js/stafflogin.js"></script>
+<script type="application/javascript" src="/assets/js/config.js"></script>
+<script type="text/javascript" src="/assets/js/functions.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-2.1.3.min.js"></script>
+<script src="/assets/js/jquery.swipeshow.min.js"></script>
+<script type="application/javascript" src="/assets/js/es6-promise-polyfill.js"></script>
+<script type="application/javascript" src="/assets/js/axios.js"></script>
+<script type="application/javascript" src="/assets/js/stafflogin.js"></script>
 
 <script>
 

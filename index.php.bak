@@ -8,32 +8,43 @@
     <meta name="format-detection" content="telephone=no">
     <title>Myer Academy</title>
 
-    <link href="/myer/Leader/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/fonts.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/myer/Leader/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="/myer/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/Leader/assets/css/menu.css" rel="stylesheet" type="text/css" />
 
-    <script src="/myer/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
-    <script src="/myer/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
-    <script src="/myer/Leader/assets/js/leaderDynamicMenu.js"type="text/javascript" ></script>
-    <script src="/myer/Leader/assets/js/Leadersearch.js"></script>
-    <link href="/myer/Leader/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-    <script src="/myer/Leader/assets/js/contentPage.js"></script>
-<!--     <script src="/myer/Leader/assets/js/getActivity.js"></script>
+    <script src="/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
+    <script src="/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
+    <script src="/Leader/assets/js/Leadersearch.js"></script>
+    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="/Leader/assets/js/contentPage.js"></script>
+	<script type="application/javascript" src="/Leader/assets/js/menu.js"></script>
+<!--     <script src="/Leader/assets/js/getActivity.js"></script>
  -->
-    
+ <script>
+$(document).ready(function() {
+    $('#filter').change(function() {
+    var filter = $('#filter').find(":selected").text();
+    //var queryString = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
+    //var passQuery = queryString[0];
+    $('#indexSearch').attr('action', '/Leader/index.php?fl='+filter).submit(); 
+
+});
+});
+ </script>
     <style>
         .loading {
             z-index: 10005;
         }
         .loading .loading-image {
-            background-image: url('/myer/Leader/assets/images/loader.gif');
+            background-image: url('/assets/images/loader.gif');
         }
     </style>
 
@@ -52,14 +63,10 @@
     <?php //include_once("dbconnect.php");?>
 
     <?php // include_once("analyticstracking.php") ?>
-    <script type="text/javascript">
-    $(document).ready(function(){
-    $( "#filter" ).change(function() {
-        var conceptName = $('#filter').find(":selected").text();
 
-});
-
-});</script>
+	<?php 
+		$jsonMenu = file_get_contents('http://52.65.147.55/webapi/content.php');
+	?>
 
 </head>
 
@@ -68,30 +75,43 @@
 <div class="menustatus"></div>
 
 <div id="mainmenu" align="left">
-    <div class="btn-menu" style="padding:0px 0px 10px 0px;border:0px;">
-        <a href="mailto:myeracademy@myer.com.au" class="lnkmenu">
-            <img src="/myer/Leader/assets/images/icon-email.png" style="margin:0px 10px 0px -4px;display:inline-block;border:0px"
-                 align="absmiddle">
-        </a>
-        <a href="index.html"
-           class="lnkmenu">
-            <img src="/myer/Leader/assets/images/icon_myer.png" style="margin:0px 10px 0px 0px;display:inline-block;border:0px"
-                 align="absmiddle">
-        </a>
-        <img src="/myer/Leader/assets/images/icon-info.png" style="margin:0px;display:inline-block;" align="absmiddle"
-             onclick="scrolltoabout(),openmenu()" class="pointer">
-        <img src="/myer/Leader/assets/images/icon-logout.png" style="margin:0px 10px;display:inline-block;cursor: pointer"
-             align="absmiddle" onclick="logout()">
-        <br>
+  
+	<div align="center">
+	
+		<div class="beforeTopHeader">
+			<div class="topHeader">
+				<ul class="nav navbar-nav">
+					<li class="text-center">
+						<a href="/Leader/index.php"><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
+					</li>
+					<li class="text-center">
+						<a href="mailto:myeracademy@myer.com.au"><i class="fa fa-lg fa-envelope-o"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">GET IN TOUCH</span></a>
+					</li>
+					<li class="text-center">
+						<a href="#" onclick="logout()"><i class="fa fa-lg fa-sign-out"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">SIGN OUT</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-    </div>
+		<form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="/Leader/index.php">
+			<div style="max-width:80%;">
+			<div class="input-group add-on">
+			<input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+			  <div class="input-group-btn">
+				<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+			  </div>
+			</div>
+			</div>
+		<br>
+		<div class="spacer20"></div>
+		</form>
+
+	</div>
     <div class="scrollcontainer scrollheight2">
         <div class="scrollpanel">
             <div id="mainmenuinner" style="max-width:1200px;width:100%">
-                <div class="btn-menu"
-                     style="color:rgba(255,255,255,1);padding:18px 0px 18px 20px;border:0px;background:url('/myer/Leader/assets/images/bullet-off.png') no-repeat left center;cursor:pointer;"
-                     onclick="scrolltoabout(),openmenu()">ABOUT MYER ACADEMY
-                </div>
+               
                 <!-- dynamicMenu here adding menu dynamically added by SMITA RXP-->
                 <div class="dynamicMenu"></div>
                 <!-- dynamicMenu here adding menu dynamically added by SMITA RXP -->
@@ -101,7 +121,7 @@
         </div>
     </div>
     <div style="width:100%;max-width:1200px;height:35px;margin-top:10px;display:block;background:rgba(156,156,156,0);cursor:pointer"
-         align="center" onclick="openmenu()"><img src="/myer/Leader/assets/images/arrow_up2.png"
+         align="center" onclick="openmenu()"><img src="/assets/images/arrow_up2.png"
                                                   style="margin:5px 0px 0px 0px;cursor:pointer;width:55px"></div>
 
 
@@ -109,22 +129,22 @@
 
 
 <div class="menu pointer" align="center" onclick="openmenu()">
-    <!-- <img src="/myer/Leader/assets/images/hamburger1.png" style="width:26px;float:left;margin:13px 0px 0px 10px"> -->
+    <!-- <img src="/Leader/assets/images/hamburger1.png" style="width:26px;float:left;margin:13px 0px 0px 10px"> -->
     
-    <a href="#" class="bar" ><i class="fa fa-bars fa-2x" aria-hidden="true"style="width:26px;float:left;margin:13px 0px 0px 10px"></i></a>
+    <a href="#" class="bar" ><i class="fa fa-bars fa-2x" aria-hidden="true" ></i></a>
 
-    <img src="/myer/Leader/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
+    <img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
 </div>
 
 
 <div align="center">
 
-    <div style="max-width:100%;min-height:70px;border-bottom:1px solid #000;"><img src="/myer/Leader/assets/images/592fabe4ab4951b364eb10eb.jpeg" ></div>
-<div style="font-family: 'aperculight';font-size:12px;line-height:2px;padding:40px 20px 10px 20px;max-width:768px;">
+    <div id="ddddd" style="max-width:100%;min-height:70px;border-bottom:1px solid #000;"><img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" ></div>
+<div class="beforeTopHeader">
 <div class="topHeader">
         <ul class="nav navbar-nav">
         <li class="text-center">
-          <a href="#" ><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
+          <a  href="/Leader/index.php" ><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
         </li>
         <li class="text-center">
           <a href="mailto:myeracademy@myer.com.au" ><i class="fa fa-lg fa-envelope-o"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">GET IN TOUCH</span></a>
@@ -139,8 +159,8 @@
         <span   class="headLine">MYER LEADERS PORTAL</span>
                <h2  class="subtitle"> REALISE YOUR LEADERSHIP POTENTIAL</h2>
         </div>
-        <form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" >
-    <div style="max-width:80%;">
+        <form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="<?php  echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
+        <div style="max-width:80%;">
         <div class="input-group add-on">
       <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
       <div class="input-group-btn">
@@ -152,6 +172,8 @@
     <div class="spacer20"></div>
 
     <span class="headLine2">What am I doing today ?</span>
+    <div class="spacer20"></div>
+    <p class="subtitle"style="max-width: 700px;">filter by the type of learning  or click one of the four leadership focus areas to discover more</p>
     <div class="spacer20"></div>
     
     <div>
@@ -171,29 +193,6 @@
 
     <div id="content">
    
-    <!-- <div clas="main">
-        <img src="/myer/php/uploadedImages/small.jpeg">
-        <h2 class="subtitle">ELEMENTS OF STYLE</h2>
-        <h1>STYLING WITH COLOUR</h1>
-        <p>The requested URL was not found on this server. The link on the referring page seems to be wrong or outdated. Please inform the author of that page about the error.</p>
-    <div style="margin:0 auto; border-bottom:1px dotted #000;max-width:80%;">
-            <span class="fa-stack fa-4x">
-                <i class="fa fa-eye fa-stack-2x" aria-hidden="true"></i>
-                <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
-            </span>
-            <span class="fa-stack fa-3x">
-                <i class="fa fa fa-heart fa-stack-2x"></i>
-                <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
-            </span>
-            <span class="fa-stack fa-3x">
-                <i class="fa fa-comment fa-stack-2x"></i>
-                <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
-            </span>
-    
-        <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
-    </div>
-        
-    </div> -->
     
    
    <!-- SearchResultDiv will show search result dynamically start here added by SMITA RXP-->
@@ -201,62 +200,86 @@
 <!-- SearchResultDiv will show search result dynamically End here added by SMITA RXP-->
 
 <?php 
- //   $sql_query="SELECT pageId,PageTitle,subTitle,pageDescription,articalFolder,ImageName,keyword,m.CategorieDescription as mainDescription, sm.smDescription as SubMain, sm.smid,  th.thLid,th.thlDescription as thlGroup,s.MainCatId FROM leaderartical as s LEFT JOIN Submaincategory as sm on s.smId = sm.smid LEFT JOIN maincategories as m on s.MainCatId= m.Id LEFT JOIN thirdlevelgroup as th on s.thLid = th.thLid ORDER BY PageRanking ";
-    //$result = mysqli_query($link,$sql_query);
-   // while ($row = mysqli_fetch_array($result, MYSQL_BOTH)) {
-        
+include('db_connect.php');
+
+if(isset($_GET['fl'])){
+    $fl= $_GET['fl'];
+        $query_fl= "SELECT Title,strapline,Description,Links,Category,Filter,CapabilityTag,Keyword,SecondaryLeadership,imageName FROM leaderassociation WHERE Filter Like '%$fl%' ORDER BY pageRanking";
+   
+        $result_fl = mysqli_query($link,$query_fl);
+    
+        // die if SQL statement failed
+        if (!$result_fl) {
+        http_response_code(404);
+        }
+        else{
+            $rowcount=mysqli_num_rows($result_fl);
+            if($rowcount){
+                while ($row = mysqli_fetch_array($result_fl, MYSQL_BOTH)) {
+                     $pos = strpos($row['Links'], "pptx");
+                    if($pos === false){
+                     $link=$row['Links'];
+                    }else{
+                        $link="/Leader/PDF/".$row['Links'];
+                    }  ?>
+                    <div class="main" id="main"><a href='<?php echo $link;?>' target="_blank" style="text-decoration: none; color:#000;"> 
+                        <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >
+                        <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
+                        <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
+                        <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p></a>
+                        <div style="margin:0 auto; border-bottom:1px dotted #000;max-width:80%;">
+                            
+                        <span class="fa-stack fa-2x">
+                                <i class="fa fa-eye fa-stack-2x" aria-hidden="true"></i>
+                                <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
+                            </span>
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa fa-heart fa-stack-2x"></i>
+                                <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
+                            </span>
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-comment fa-stack-2x"></i>
+                                <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
+                            </span>
+                           
+
+
+    <!--                         <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
+     -->                    </div>
+                    </div>
+            <?php
+                }
+            }
+            else{
+                echo"NO Record Found!!";
+            }
+    }
+    }
+    
 ?>
 
         <div align="center" style="padding:25px 8px;background:#f5f5f5">
             <div style="max-width:1600px;">
-            <a href="myer-credit-card/index.html"><div class="tilewrap" style="background-image: url(/myer/Leader/assets/images/slider01.jpg); height: 401.5px;">
-                    <div class="tileinner">
-                        <div class="tile-valign">
-                            <div class="spacer60"></div>
-                            <div class="logowrap" align="center">
-                                <div class="hd-tile">MYER CREDIT CARD</div>
-                                <span class="txt-tile">Introducing the new Myer Credit Card</span>
-                            </div>
-                        </div>
-                    </div>
+            <a href="/Leader/Leader.php?pg=LEADING SELF" >
+                <div  class="LeaderHome">
+                    <img src="/Leader/assets/images/LEADINGSELF.jpg" style="max-width:100%;">
                 </div>
-                </a> 
-                <a href="myer-credit-card/index.html"><div class="tilewrap" style="background-image: url(/myer/Leader/assets/images/slider02.jpg); height: 401.5px;">
-                    <div class="tileinner">
-                        <div class="tile-valign">
-                            <div class="spacer60"></div>
-                            <div class="logowrap" align="center">
-                                <div class="hd-tile">MYER CREDIT CARD</div>
-                                <span class="txt-tile">Introducing the new Myer Credit Card</span>
-                            </div>
-                        </div>
-                    </div>
+            </a> 
+            <a href="/Leader/Leader.php?pg=LEADING OTHERS">
+                <div  class="LeaderHome">
+                       <img src="/Leader/assets/images/LEADINGOTHERS.jpg" style="max-width:100%;">
+                </div>  
+            </a> 
+            <a href="/Leader/Leader.php?pg=WORKING ON THE BUSINES">
+                <div  class="LeaderHome">
+                    <img src="/Leader/assets/images/WORKINGONTHEBUSINESS.jpg" style="max-width:100%;">
+                 </div>
+            </a> 
+            <a href="/Leader/Leader.php?pg=WORKING IN THE BUSINESS">
+                <div  class="LeaderHome">
+                    <img src="/Leader/assets/images/WORKINGINTHEBUSINESS.jpg" style="max-width:100%;">
                 </div>
-                </a> 
-                <a href="myer-credit-card/index.html"><div class="tilewrap" style="background-image: url(/myer/Leader/assets/images/slider02.jpg); height: 401.5px;">
-                    <div class="tileinner">
-                        <div class="tile-valign">
-                            <div class="spacer60"></div>
-                            <div class="logowrap" align="center">
-                                <div class="hd-tile">MYER CREDIT CARD</div>
-                                <span class="txt-tile">Introducing the new Myer Credit Card</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </a> 
-                <a href="myer-credit-card/index.html"><div class="tilewrap" style="background-image: url(/myer/Leader/assets/images/slider03.jpg); height: 401.5px;">
-                    <div class="tileinner">
-                        <div class="tile-valign">
-                            <div class="spacer60"></div>
-                            <div class="logowrap" align="center">
-                                <div class="hd-tile">MYER CREDIT CARD</div>
-                                <span class="txt-tile">Introducing the new Myer Credit Card</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </a> 
+            </a> 
                 
               </div>
 <!-- Here Comment, Rating, like and read comment Part starting -->
@@ -311,13 +334,9 @@
             </div>
 
             <div class="col-md-12 text-center">
-                <!--<div class="col-md-6">
-
-                </div>-->
-                <!--<div class="col-md-6">-->
+               
                 <button id="wrtcmtsubmitbtn" type="submit" value="Submit" class="button_cust">submit</button>
                 <button id="wrtcmtcancelbtn" type="submit" value="cancel" class="button_cust">cancel</button>
-                <!--</div>-->
             </div>
         </div>
         <div class="row" id="readcommentsdiv">
@@ -329,28 +348,27 @@
 
 
         </div>
-        
+         
 <!-- Here Comment, Rating, like and read comment Part ending -->
 
 
 
               
-        <div id="footer">
+         <div id="footer">
             &copy 2016 www.myeracademy.com.au<br><br>
-            <img src="/myer/Leader/assets/images/arrow_up.png" style="margin:20px 0px" class="pointer" onclick="scrolltotop()">
-        </div>
+            <img src="/assets/images/arrow_up.png" style="margin:20px 0px" class="pointer" onclick="scrolltotop()">
+        </div> 
 
 
     </div>
 </div>
 
-<script type="application/javascript" src="/myer/Leader/assets/js/config.js"></script>
-<script type="text/javascript" src="/myer/Leader/assets/js/functions.js"></script>
-<script type="text/javascript" src="/myer/Leader/assets/js/jquery-2.1.3.min.js"></script>
-<script src="/myer/Leader/assets/js/jquery.swipeshow.min.js"></script>
-<script type="application/javascript" src="/myer/Leader/assets/js/es6-promise-polyfill.js"></script>
-<script type="application/javascript" src="/myer/Leader/assets/js/axios.js"></script>
-<script type="application/javascript" src="/myer/Leader/assets/js/stafflogin.js"></script>
+<script type="application/javascript" src="/assets/js/config.js"></script>
+<script type="text/javascript" src="/assets/js/functions.js"></script>
+<script src="/assets/js/jquery.swipeshow.min.js"></script>
+<script type="application/javascript" src="/assets/js/es6-promise-polyfill.js"></script>
+<script type="application/javascript" src="/assets/js/axios.js"></script>
+<script type="application/javascript" src="/assets/js/stafflogin.js"></script>
 
 <script>
 
@@ -414,7 +432,7 @@
     }
 
     function redirect() {
-        document.location.href = '/myer/Leader/login.html';
+        document.location.href = '/index.html';
     }
 
 

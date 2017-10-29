@@ -17,12 +17,13 @@ $(document).ready(function () {
         success: function (data) {
         //From following code pulling total like for the particular page
          var obj=jQuery.parseJSON(data);
+         console.log(obj);
         html='<span id="pagelike">'+obj.pagelike+'</span>';
         $('#totalLike').append(html);   
-        if(obj.rating !=0){
+       /*  if(obj.rating !=0){
             //Here pulling rating for the particular page given by login user 
             $('input:radio[class=rating-input][id=rating-input-1-'+obj.rating+']').prop('checked', true);
-           }
+           } */
         },
         error: function (data) {
             console.log(data);
@@ -30,10 +31,7 @@ $(document).ready(function () {
     });
 
     $('#btnlike').click(function () {
-        var pageLike = '';
-
-     //   $(this).toggleClass('active');
-        //saving into DB when clicked on like button
+        var pageLike = 'like';
         $('#btnlike').hasClass('active') ? pageLike = 'like' : pageLike = '';
         //data to post
         var data = '&PageID=' + pageId + '&UserId=' + userId + '&PageLike=' + pageLike + '&Flag=like';
@@ -41,7 +39,7 @@ $(document).ready(function () {
         ajaxCall(data)
     });
 
-    $('#rating').click(function () {
+   /*  $('#rating').click(function () {
 
         var rating = $('input:radio[name=rating]:checked').val();
         //make the postdata
@@ -49,7 +47,7 @@ $(document).ready(function () {
 
         //code to send data to php file
         ajaxCall(data)
-    });
+    }); */
 
     $('#btnwrtcmts').click(function () {
         $('#writecommentsdiv').show();
@@ -128,7 +126,7 @@ $(document).ready(function () {
              }
             },
             error: function (data) {
-                console.log(error);
+                console.log(data);
             }
         });
     }
