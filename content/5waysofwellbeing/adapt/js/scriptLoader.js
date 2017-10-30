@@ -40,6 +40,12 @@ Modernizr.load([
                         return false;
                     });
 
+                    $(".comment-like").click(function () {
+                        alert('Comment liked ' + $(this).attr("id"));
+                        console.log($(this));
+                        return false;
+                    });
+
                     $('#customComponent').slideToggle();
                     $('#divAddComment').slideToggle();
                     $('#listComments').slideToggle();
