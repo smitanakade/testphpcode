@@ -13,9 +13,9 @@
     <link href="/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- <link href="/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>
+    <link href="/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/> -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/Leader/assets/css/menu.css" rel="stylesheet" type="text/css" />
@@ -24,8 +24,8 @@
     <script src="/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
     <script src="/Leader/assets/js/Leadersearch.js"></script>
     <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-<!--     <script src="/Leader/assets/js/contentPage.js"></script>
- -->	<script type="application/javascript" src="/Leader/assets/js/menu.js"></script>
+     <script src="/Leader/assets/js/contentPage.js"></script>
+ 	<script type="application/javascript" src="/Leader/assets/js/menu.js"></script>
 <!--     <script src="/Leader/assets/js/getActivity.js"></script>
  -->
  <script>
@@ -70,8 +70,8 @@ $(document).ready(function() {
 
 </head>
 
-<body onresize="resize(),slidersize()" onload="resize(),slidersize()">
-
+<!-- <body onresize="resize(),slidersize()" onload="resize(),slidersize()"> -->
+<body>
 <div class="menustatus"></div>
 
 <div id="mainmenu" align="left">

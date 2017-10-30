@@ -35,32 +35,41 @@ if (!$result_rating) {
 	$result = mysqli_query($link, "SELECT * from articalactivity where PageId ='" . mysqli_real_escape_string($link, $_POST['PageID']) . "' and UserId='" . mysqli_real_escape_string($link, $_POST['UserId']) . "'");
 
 	// Onload code and Read comments code
-/* 
+
 	if ($_POST['Flag'] == 'page')
 		{
 
-		$count = mysqli_num_rows($result);
-		$data_arr = array();
-
-		
-		if ($count)
-			{
+			$date = date('Y-m-d');
 			
-	if (mysqli_num_rows($result) > 1 ? ''
-		//mysqli_query($link, "UPDATE usertracking SET pagelike='" . mysqli_real_escape_string($link, $_POST['PageLike']) . "'  where PageId ='" . mysqli_real_escape_string($link, $_POST['PageID']) . "' and UserId='" . mysqli_real_escape_string($link, $_POST['UserId']) . "'") 
-		: 
-		mysqli_query($link, "INSERT INTO usertracking (UserId,pageId,pageName,InTime,OutTime,PageCategory) values('" . mysqli_real_escape_string($link, $_POST['UserId']) . "','pageName','" . mysqli_real_escape_string($link, $_POST['PageID']) . "',now(),'','PageCategory')" ));
+			$loadQuery = "Select * from usertracking where UserId='" . mysqli_real_escape_string($link, $_POST['UserId']) . "' and  pageId ='" . mysqli_real_escape_string($link, $_POST['PageID']) . "' and onDate='".$date."'";
+			$loadResult = mysqli_query($link,$loadQuery);
+			$loadcount = mysqli_num_rows($loadResult);	
+		
+		if ($loadcount==0)
+			{
+			echo "page";
+			$loadInsertQuery="INSERT INTO usertracking (UserId,pageId,pageName,InTime,OutTime,PageCategory,onDate) values('" . mysqli_real_escape_string($link, $_POST['UserId']) . "','" . mysqli_real_escape_string($link, $_POST['PageID']) . "','pagename',now(),'','PageCategory','".$date."')";
+			mysqli_query($link,$loadInsertQuery);
 	
-	
-			while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
-				{
-				array_push($data_arr, $item);
-				}
-
-			echo json_encode($data_arr);
-			}
 		}
- */
+	}
+if ($_POST['Flag'] == 'unload')
+{
+	echo "UNLOAD";
+	$date = date('Y-m-d');
+	
+	$unloadQuery = "Select * from usertracking where UserId='" . mysqli_real_escape_string($link, $_POST['UserId']) . "' and  pageId ='" . mysqli_real_escape_string($link, $_POST['PageID']) . "' and onDate='".$date."'";
+	$unloadResult = mysqli_query($link,$unloadQuery);
+	$unloadcount = mysqli_num_rows($unloadResult);
+	echo $unloadQuery;
+	if ($unloadcount)
+	{	
+		$unloadUpdateQuery= "UPDATE usertracking SET OutTime=now()  where PageId ='" . mysqli_real_escape_string($link, $_POST['PageID']) . "' and UserId='" . mysqli_real_escape_string($link, $_POST['UserId']) . "' and onDate='".$date."'";
+		echo $unloadUpdateQuery;
+		mysqli_query($link,$unloadUpdateQuery); 
+	}
+}
+ 
 	// for like comments button click
 
 	if ($_POST['Flag'] == 'like')
@@ -101,13 +110,7 @@ if (!$result_rating) {
 		mysqli_query($link, "INSERT INTO articalactivity (PageId,UserId,pagelike,rating,comment) VALUES ('" . mysqli_real_escape_string($link, $_POST['PageID']) . "','" . mysqli_real_escape_string($link, $_POST['UserId']) . "','','','" . mysqli_real_escape_string($link, $_POST['Comments']) . "')"));
 		}
 
-		if ($_POST['Flag'] == 'unload')
-		{
-		$test="UPDATE usertracking SET OutTime='" . mysqli_real_escape_string($link, $_POST['timeSpent']) . "'  where pageId ='" . mysqli_real_escape_string($link, $_POST['PageID']) . "' and UserId='" . mysqli_real_escape_string($link, $_POST['UserId']) . "'";
-	//	mysqli_query($link, "UPDATE usertracking SET OutTime='" . mysqli_real_escape_string($link, $_POST['timeSpent']) . "'  where PageId ='" . mysqli_real_escape_string($link, $_POST['PageID']) . "' and UserId='" . mysqli_real_escape_string($link, $_POST['UserId']) . "'") 
 		
-		}
-
 
 		echo json_encode($main_item);		
 // Close connection

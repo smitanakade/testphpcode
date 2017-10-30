@@ -130,6 +130,26 @@ $(document).ready(function () {
             }
         });
     }
-  
+    var recod='&PageID=' + pageId + '&UserId=' + userId + '&Flag=unload';
+    $(window).unload(function() {
+        console.log(recod);
+         $.ajax({
+            url: "/Leader/PageComments.php",
+            type: "POST",
+            data: recod,
+            async : false,
+            success: function (data) {    
+                console.log(data); 
+            }      
+        }); 
+        console.log("after ajax call"); 
+        
+});
+$(window).on('beforeunload',function(){
+    console.log('Before BYE');
+    
+});
    
 });
+
+  

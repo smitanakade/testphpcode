@@ -23,9 +23,9 @@
     <link href="/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>
+   <!--  <link href="/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/> 
+    <link href="/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/>-->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
@@ -283,7 +283,7 @@ $query_fl= "SELECT Title,strapline,Description,Links,Category,Filter,CapabilityT
                     $link="/Leader/PDF/".$row['Links'];
                 }  ?>
                 <div class="main" id="main">
-                    <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >
+                <a href='<?php echo $link;?>' target="_blank" > <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >  </a>  
                     <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
                     <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
                     <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p>
@@ -300,7 +300,7 @@ $query_fl= "SELECT Title,strapline,Description,Links,Category,Filter,CapabilityT
                             <i class="fa fa-comment fa-stack-2x"></i>
                             <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
                         </span><br/>
-                        <a href='<?php echo $link;?>' target="_blank" class="button_cust"> CONTINUE READING </a>   
+                        
 <!--                         <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
  -->              
                 </div>
@@ -333,8 +333,8 @@ $pg=$_GET['pg'];
                     $link="/Leader/PDF/".$row['Links'];
                 }  ?>
                 <div class="main" id="main"> 
-                    <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >
-                    <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
+                <a href='<?php echo $link;?>' target="_blank" > <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >  </a>  
+                <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
                     <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
                     <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p>
                     <div style="margin:0 auto; border-bottom:1px dotted #000;max-width:80%;">
@@ -351,7 +351,6 @@ $pg=$_GET['pg'];
                             <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
                         </span>
                         <br/>
-                        <a href='<?php echo $link;?>' target="_blank" class="button_cust"> CONTINUE READING </a>   
 
 <!--                         <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
  -->                    </div>
