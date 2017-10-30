@@ -15,187 +15,400 @@
     <link href="adapt/css/adapt.css" type="text/css" rel="stylesheet"/>
     <link href="adapt/css/adapt-publish2.css" type="text/css" rel="stylesheet"/>
     <link href="adapt/css/adapt-publish1.css" type="text/css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
-    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
-    <script src="/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
-    <script src="/Leader/assets/js/contentPage.js"></script>
-    <!--Boostrap Styles-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-        <!--FontAwesome-->
-        <!--[if IE 7]>
-        <link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
-        <![endif]-->
-        
-        <!--CSS Style-->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-   
+    <style>
+        .dotted_line {
+            border: 0; 
+            border-bottom: 1px dotted #ddd;
+        }
+        .faAction {
+            font-size: 70px;
+            color: #fbab92;
+        }
+        .faView {
+            font-size: 56px;
+            color: #ccc
+        }
+        .faActionText {
+            color: #666;
+            font-size: 16px;
+         }
+        .faViewText {
+            color: #666;
+            font-size: 10px;
+        }
+
+        .separator {
+            content: '';
+            display: inline-block;
+            background: #888;
+            margin: 0px 30px;
+            height: 80px;
+            width: 0px;
+            vertical-align: top;
+            border-left: 1px dashed;
+            border-color:#ddd;
+        }
+       
+        .comments-container {
+            margin: 60px auto 15px;
+            width: 700px;
+        }
+
+            .comments-container h1 {
+                font-size: 36px;
+                color: #283035;
+                font-weight: 400;
+            }
+
+                .comments-container h1 a {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
+        .comments-list {
+            margin-top: 30px;
+            position: relative;
+        }
+       
+        .comments-list li {
+            margin-bottom: 15px;
+            display: block;
+            position: relative;
+        }
+
+            .comments-list li:after {
+                content: '';
+                display: block;
+                clear: both;
+                height: 0;
+                width: 0;
+            }
+
+        .comments-list .comment-avatar {
+            width: 90px;
+            height: 90px;
+            position: relative;
+            z-index: 99;
+            float: left;
+            border: 3px solid #FFF;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+            .comments-list .comment-avatar img {
+                width: 100%;
+                height: 100%;
+            }
+
+
+        .comments-list .comment-box {
+            width: 500px;
+            float: right;
+            position: relative;
+            
+        }
+
+
+
+        .comment-box .comment-head {
+            
+            padding: 10px 12px;
+            
+            overflow: hidden;
+         }
+
+            .comment-box .comment-head i {
+                
+                margin-left: 0px;
+                position: relative;
+                top: 2px;
+                color: #A6A6A6;
+                cursor: pointer;
+                -webkit-transition: color 0.3s ease;
+                -o-transition: color 0.3s ease;
+                transition: color 0.3s ease;
+            }
+
+                .comment-box .comment-head i:hover {
+                    color: #03658c;
+                }
+
+        .comment-box .comment-name {
+            color: #333;
+            font-size: 14px;
+            font-weight: 700;
+            float: left;
+            margin-right: 10px;
+        }
+
+            .comment-box .comment-name a {
+                color: #333;
+            }
+
+        .comment-box .comment-head span {
+            float: left;
+            color: #999;
+            font-size: 13px;
+            position: relative;
+            top: 1px;
+        }
+
+        .comment-box .comment-content {
+            background: #FFF;
+            padding: 12px;
+            font-size: 15px;
+            color: #595959;
+            -webkit-border-radius: 0 0 4px 4px;
+            -moz-border-radius: 0 0 4px 4px;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .comment-box .comment-name.by-author, .comment-box .comment-name.by-author a {
+            color: #03658c;
+        }
+
+            .comment-box .comment-name.by-author:after {
+                content: 'autor';
+                background: #03658c;
+                color: #FFF;
+                font-size: 12px;
+                padding: 3px 5px;
+                font-weight: 700;
+                margin-left: 10px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+            }
+
+ 
+            .block-lg {padding: 0px;}
+            @media only screen and (max-width: 766px) {
+                .comments-container {
+                    width: 480px;
+                }
+
+                .comments-list .comment-box {
+                    width: 390px;
+                }
+
+            }
+        </style>
     
 </head>
 
 <body>
-    <div id="wrapper">
-        <nav class="navigation-container">
-        </nav>
-    </div>
-    <!-- Here Comment, Rating, like and read comment Part starting -->
+        <div id="wrapper">
+            <nav class="navigation-container">
+            </nav>
+        </div>
 
-    <div class="aria-live-assertive" aria-live="assertive">
-    </div>
-        <div class="page content-container">
-            <br/>
-            <div class="row">
-                <div class="col-md-12 text-center" id="totalLike">
-                    <button id="btnlike" type="button" class="btn btn-default btn-sm">
-                        <i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i> Like
-                    </button>
-                </div>
-            </div>
-            <br/>
-            
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <button id="btnwrtcmts" type="submit" value="Submit" class="button_cust">Write comments</button>
-                </div>
-                <div class="col-md-6 text-center">
-                    <button id="btnrdcmts" type="submit" value="Submit" class="button_cust">Read comments</button>
-                </div>
-            </div>
-            <div class="row" id="writecommentsdiv">
-                <div class="col-md-12">
-                    <textarea class="form-control" rows="5" id="comment">
-    
-    </textarea>
-    
-                </div>
-    
-                <div class="col-md-12 text-center">
-                   
-                    <button id="wrtcmtsubmitbtn" type="submit" value="Submit" class="button_cust">submit</button>
-                    <button id="wrtcmtcancelbtn" type="submit" value="cancel" class="button_cust">cancel</button>
-                </div>
-            </div>
-            <div class="row" id="readcommentsdiv">
-        
-                    <div role="region" class="article article-style-10 ">
-                    <div id="readComment"></div>
-                        
+        <div class="page-container" id="customComponent" style="display:none;">
+            <div class="page-background-container"></div>
+                <div class="page content-container" style="opacity: 1;">
+                <div class="page-inner article-container content-container-inner" role="main">
+                    <div role="region" class="article">
+                        <div class="article-inner block-container">
+                            <div class="block block-lg content-row">
+                                <div class="block-inner">
+                                    <div class="component-container">
+                                        <div class="component links-component">
+                                            <div class="links-inner component-inner">
+
+                                                <div class="links-body component-body">
+                                                    <div class="links-body-inner component-body-inner">
+                                                        <p><br></p><p><br></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="links-widget component-widget">
+                                                    <div class="links-item component-item clearfix top">
+                                                        <div class="links-item-container" align="center">
+                                                            <span class="fa-stack fa-2x">
+                                                                <i class="fa fa-eye fa-stack-2x faView"></i><strong class="fa-stack-1x fa-stack-text faViewText" id="noViews">500</strong>
+                                                            </span>
+                                                            
+                                                            <span class="fa-stack fa-2x">
+                                                                <i class="fa fa-heart fa-stack-2x faView"></i><strong class="fa-stack-1x fa-stack-text faViewText" id="noLikes">20</strong>
+                                                            </span>
+                                                            
+                                                            <span class="fa-stack fa-2x">
+                                                                <i class="fa fa-comment fa-stack-2x faView"></i><strong class="fa-stack-1x fa-stack-text faViewText" id="noComments">12</strong>
+                                                            </span>
+                                                        </div>
+                                                        <br/>
+                                                        <hr class="dotted_line" />
+                                                        <br/>
+                                                        <div class="links-widget component-widget">
+                                                            <div class="article article-style-1">
+                                                                <div class="links-item-container" align="center">
+                                                                    
+                                                                    <a href="#" class="links-item-link" target="_blank">
+                                                                        <i class="fa fa-heart fa-fw faAction"></i>&nbsp;LIKE&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    </a>
+                                                                    <span class="separator"></span>
+                                                                    <a href="#" class="links-item-link" id="addComment">
+                                                                        <i class="fa fa-comment fa-fw faAction"></i>&nbsp;COMMENT
+                                                                    </a>
+                                                                    
+                                                                </div>
+
+                                                                <div id="divAddComment">
+                                                                    <div class="links-body component-body">
+                                                                        <div class="links-body-inner component-body-inner">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div>
+                                                                        <textarea id="comment" name="comment" placeholder="Enter comment here..." style="min-height: 200px;width:100%; background-color:#eee; border:none;"></textarea>
+                                                                    </div>
+
+                                                                    <div class="buttons-cluster-bottom clearfix" align="center">
+                                                                        <div class="buttons-marking-icon icon display-none">
+                                                                        </div>
+                                                                        <button id="postComment" class="button primary buttons-action button-icon-before" aria-label="SHOW COMMENTS">
+                                                                            <span class="button-text">POST COMMENT</span>
+                                                                        </button>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="links-body component-body">
+                                                                    <div class="links-body-inner component-body-inner">
+                                                                        <p><br></p><p><br></p>
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                                
+
+
+                                                                            <div class="buttons-cluster-bottom clearfix" align="center">
+                                                                                <div class="buttons-marking-icon icon display-none">
+                                                                                </div>
+                                                                                <button id="showComments" class="button primary buttons-action button-icon-before" aria-label="SHOW COMMENTS">
+                                                                                    <span class="button-text">SHOW COMMENTS</span>
+                                                                                </button>
+                                                                                
+                                                                            </div>
+
+                                                                       
+
+                                                                
+
+
+
+                                                                        <div class="comments-container" id="listComments">
+
+                                                                            <ul id="comments-list" class="comments-list">
+                                                                                <li>
+                                                                                    <div class="comment-main-level">
+
+                                                                                        <div class="comment-avatar"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt=""></div>
+
+                                                                                        <div class="comment-box">
+                                                                                            <div class="comment-head">
+                                                                                                <h6 class="comment-name">BEN</h6>
+
+                                                                                               
+                                                                                            </div>
+                                                                                            <div class="comment-content">
+                                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                                                                
+                                                                                            </div>
+
+                                                                                            <div class="comment-head">
+                                                                                                
+                                                                                                <i class="fa fa-heart"></i>9
+                                                                                            </div>
+                                                                                            <div>Dec 2017</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <hr class="dotted_line" />
+                                                                                <li>
+                                                                                    <div class="comment-main-level">
+                                                                                        <!-- Avatar -->
+                                                                                        <div class="comment-avatar"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt=""></div>
+
+                                                                                        <div class="comment-box">
+                                                                                            <div class="comment-head">
+                                                                                                <h6 class="comment-name">JOHN</h6>
+
+                                                                                               
+                                                                                            </div>
+                                                                                            <div class="comment-content">
+                                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+
+                                                                                            </div>
+                                                                                            <div class="comment-head">
+                                                                                                
+                                                                                                <i class="fa fa-heart"></i>6
+                                                                                            </div>
+                                                                                            <div>Dec 2017</div>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-    
-    
+                </div>
             </div>
-             
-    <!-- Here Comment, Rating, like and read comment Part ending -->
-    
-    
-        <div class="aria-live-assertive" aria-live="assertive">
-    </div>
-    
-    <script src="libraries/raphael.js" type="text/javascript" language="javascript"></script>
-    <script src="libraries/modernizr.js" type="text/javascript" language="javascript"></script>
-    <script src="libraries/pdfmake.js" type="text/javascript" language="javascript"></script>
-    <script src="libraries/vfs_fonts.js" type="text/javascript" language="javascript"></script>
-    <script src="adapt/js/scriptLoader.js" type="text/javascript" language="javascript"></script>
-    
+        </div>
 
-<script type="application/javascript" src="/assets/js/config.js"></script>
-<script type="text/javascript" src="/assets/js/functions.js"></script>
-<script src="/assets/js/jquery.swipeshow.min.js"></script>
-<script type="application/javascript" src="/assets/js/es6-promise-polyfill.js"></script>
-    <script type="application/javascript" src="/assets/js/axios.js"></script>
-    <script type="application/javascript" src="/assets/js/stafflogin.js"></script>
-    
-    <script>
-    
-        var loginCheck = new StaffLogin(loginConfig);
-        loginCheck.checkIfLoggedIn(function (isLoggedIn) {
-            if (isLoggedIn) {
-                showPage();
-            } else {
-                redirect();
-            }
-        })
-    
-        $(document).ready(function () {
-            $(this).scroll(function () {
-                var pagew = window.innerWidth;
-                var sheight = $(window).scrollTop();
-                if (sheight >= 300) {
-                    $('.menu').css("background", "rgb(255, 255, 255)");
-                    $('.menu').css("box-shadow", "0px 0px 15px rgba(0,0,0,.7)");
-                    $('.logo-myeracademy2').css("opacity", "1");
-                }
-    
-                else {
-                    $('.menu').css("background", "rgba(0,0,0,0)");
-                    $('.logo-myeracademy2').css("opacity", "0");
-                    $('.menu').css("box-shadow", "0px 0px 15px rgba(0,0,0,0)")
-                }
-    
-                if (sheight >= 150) {
-                    if (pagew <= 640) {
-    
-                        $('.menu').css("background", "rgb(255, 255, 255)");
-                        $('.menu').css("box-shadow", "0px 0px 15px rgba(0,0,0,.7)");
-                        $('.logo-myeracademy2').css("opacity", "1");
-                    }
-                }
-            });
-        });
-    
-        $(window).load(function () {
-    
-            $('.logo-myeracademy').css("transform", "scale(1.00)");
-            $('.logo-myeracademy').css("opacity", "1");
-        });
-    
-        function showPage() {
-            $('#content').fadeTo(500, 1);
-            $('.logo-myeracademy').css("transform", "scale(1.00)");
-            $('.logo-myeracademy').css("opacity", "1");
-            var mainmenuh = $('#mainmenu').height();
-            var mainmenuh2 = 0 - mainmenuh - 110;
-            $('#mainmenu').css("margin-top", mainmenuh2);
-    
-            if (window.location.hash) {
-                $('.tab1 .tabinner3').fadeTo(0, '0');
-                var hash = window.location.hash;
-                if (hash == '#about') {
-                    scrolltoabout();
-                }
-            }
-        }
-    
-        function redirect() {
-            document.location.href = '/index.html';
-        }
-    
-    
-        function logout() {
-            loginCheck.logout();
-            redirect();
-        }
-    
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-85609472-1', 'auto');
-        ga('send', 'pageview');
-    
-        (function ($) {
-            $(".version").text($.swipeshow.version);
-            $(".slideshow").swipeshow({autostart: true, mouse: true, interval: 6000});
-        })(jQuery);
-    </script>
+        <div class="aria-live-assertive" aria-live="assertive">
+        </div>
+        <script src="libraries/raphael.js" type="text/javascript" language="javascript"></script>
+        <script src="libraries/modernizr.js" type="text/javascript" language="javascript"></script>
+        <script src="libraries/pdfmake.js" type="text/javascript" language="javascript"></script>
+        <script src="libraries/vfs_fonts.js" type="text/javascript" language="javascript"></script>
+        <script src="adapt/js/scriptLoader.js" type="text/javascript" language="javascript"></script>
 </body>
 </html>
+
+
+<!--
+<div id="disqus_thread"></div>
+<script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://danavisescu.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<script id="dsq-count-scr" src="//danavisescu.disqus.com/count.js" async></script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->
