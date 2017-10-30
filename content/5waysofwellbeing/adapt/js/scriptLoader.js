@@ -36,7 +36,10 @@ Modernizr.load([
                     });
                     
                     $("#postComment").click(function () {
-                        alert('Comment posted ' + $('#comment').val());
+                        if ($('#comment').val().length < 5)
+                            alert('You must enter at least 5 characters');
+                        else
+                            alert('Comment posted ' + $('#comment').val());
                         return false;
                     });
 
