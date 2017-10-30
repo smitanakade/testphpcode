@@ -43,14 +43,16 @@ Modernizr.load([
                         return false;
                     });
 
+
+                    // commentHtml should come from the server
+                    $("#listComments").html(commentsHtml);
+
+
                     $(".comment-like").click(function () {
                         alert('Comment liked ' + $(this).attr("id"));
                         console.log($(this));
                         return false;
                     });
-
-                    // commentHtml should come from the server
-                    $("#listComments").html(commentsHtml);
 
                     $('#customComponent').slideToggle();
                     $('#divAddComment').slideToggle();
