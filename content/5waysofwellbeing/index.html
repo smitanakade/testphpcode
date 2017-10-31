@@ -16,7 +16,7 @@
     <link href="adapt/css/adapt-publish2.css" type="text/css" rel="stylesheet"/>
     <link href="adapt/css/adapt-publish1.css" type="text/css" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="/Leader/assets/css/comments.css" type="text/css" rel="stylesheet" />
+    <link href="../../assets/css/comments.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="/assets/js/jquery-2.1.3.min.js"></script>
     
     
@@ -49,17 +49,9 @@
                                                 <div class="links-widget component-widget">
                                                     <div class="links-item component-item clearfix top">
                                                         <div class="links-item-container" align="center">
-                                                            <span class="fa-stack fa-2x">
-                                                                <i class="fa fa-eye fa-stack-2x faView"></i><strong class="fa-stack-1x fa-stack-text faViewText" id="noViews">500</strong>
-                                                            </span>
-                                                            
-                                                            <span class="fa-stack fa-2x">
-                                                                <i class="fa fa-heart fa-stack-2x faView"></i><strong class="fa-stack-1x fa-stack-text faViewText" id="noLikes">20</strong>
-                                                            </span>
-                                                            
-                                                            <span class="fa-stack fa-2x">
-                                                                <i class="fa fa-comment fa-stack-2x faView"></i><strong class="fa-stack-1x fa-stack-text faViewText" id="noComments">12</strong>
-                                                            </span>
+                                                            <i class="fa fa-fw fa-eye faView"></i><span class="faViewText" id="noViews">500</span>
+                                                            <i class="fa fa-fw fa-heart faView"></i><span class="faViewText" id="noLikes">20</span>
+                                                            <i class="fa fa-fw fa-comment faView"></i><span class="faViewText" id="noComments">12</span>
                                                         </div>
                                                         <br/>
                                                         <hr class="dotted_line" />
@@ -68,12 +60,12 @@
                                                             <div class="article article-style-1">
                                                                 <div class="links-item-container" align="center">
                                                                     
-                                                                    <a href="#" class="links-item-link" target="_blank">
-                                                                        <i class="fa fa-heart fa-fw faAction"></i>&nbsp;LIKE&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    <a href="#" class="links-item-link like-buttons" id="like">
+                                                                        <i class="fa fa-heart fa-fw faAction"></i><span class="faActionText">LIKE&nbsp;&nbsp;&nbsp;&nbsp;</span> 
                                                                     </a>
                                                                     <span class="separator"></span>
-                                                                    <a href="#" class="links-item-link" id="addComment">
-                                                                        <i class="fa fa-comment fa-fw faAction"></i>&nbsp;COMMENT
+                                                                    <a href="#" class="links-item-link like-buttons" id="addComment">
+                                                                        <i class="fa fa-comment fa-fw faAction"></i><span class="faActionText">COMMENT</span> 
                                                                     </a>
                                                                     
                                                                 </div>
@@ -97,14 +89,6 @@
 
                                                                     </div>
                                                                 </div>
-
-
-                                                                <div class="links-body component-body">
-                                                                    <div class="links-body-inner component-body-inner">
-                                                                        <p><br></p><p><br></p>
-                                                                    </div>
-                                                                </div>
-
 
                                                                 <div class="buttons-cluster-bottom clearfix" align="center">
                                                                     <div class="buttons-marking-icon icon display-none">
@@ -147,7 +131,7 @@
         
         
         <script>
-        
+        /*
     var loginCheck = new StaffLogin(loginConfig);
     loginCheck.checkIfLoggedIn(function (isLoggedIn) {
         if (isLoggedIn) {
@@ -205,7 +189,7 @@
     ga('create', 'UA-85609472-1', 'auto');
     ga('send', 'pageview');
 
- 
+ */
         
 </script>        
 </body>

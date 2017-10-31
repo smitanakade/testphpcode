@@ -4,39 +4,82 @@
 }
 
 .faAction {
-    font-size: 70px;
+    font-size: 48px;
     color: #fbab92;
 }
 
 .faView {
-    font-size: 56px;
-    color: #ccc
+    font-size: 44px;
+    color: #ccc;
 }
 
 .faActionText {
     color: #666;
     font-size: 16px;
+    vertical-align:text-top;
+    padding-left:2px;
 }
 
 .faViewText {
     color: #666;
-    font-size: 10px;
+    font-size: 14px;
+    vertical-align: text-top;
+    padding-left:2px;
+    padding-right: 20px;
 }
 
+.like-buttons{
+    color:#333;
+}
 .separator {
     content: '';
     display: inline-block;
     background: #888;
     margin: 0px 30px;
-    height: 80px;
+    height: 70px;
     width: 0px;
     vertical-align: top;
     border-left: 1px dashed;
     border-color: #ddd;
 }
 
+@media only screen and (max-width: 768px) {
+    .faAction {
+        font-size: 43px;
+        color: #fbab92;
+    }
+
+    .faView {
+        font-size: 40px;
+        color: #ccc;
+    }
+
+    .faActionText {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .faViewText {
+        color: #666;
+        font-size: 8px;
+    }
+
+    .separator {
+        content: '';
+        display: inline-block;
+        background: #888;
+        margin: 0px 15px;
+        height: 60px;
+        width: 0px;
+        vertical-align: top;
+        border-left: 1px dashed;
+        border-color: #ddd;
+    }
+}
+
+
 .comments-container {
-    margin: 60px auto 15px;
+    margin: 10px auto 15px;
     width: 700px;
 }
 
@@ -101,7 +144,7 @@
 
 
 .comment-box .comment-head {
-    padding: 10px 12px;
+    padding: 5px 6px;
     overflow: hidden;
 }
 
@@ -156,7 +199,7 @@
 
 .comment-box .comment-content {
     background: #FFF;
-    padding: 12px;
+    padding: 6px;
     font-size: 15px;
     color: #595959;
     -webkit-border-radius: 0 0 4px 4px;
@@ -186,12 +229,40 @@
     padding: 0px;
 }
 
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 768px) {
+
     .comments-container {
-        width: 480px;
+        width: 500px;
+        margin: 5px auto 7px;
+    }
+
+   .comments-list .comment-box {
+        width: 350px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .comments-container {
+        width: 300px;
+        margin: 1px auto 2px;
     }
 
     .comments-list .comment-box {
-        width: 390px;
+        width: 280px;
+        float:left;
+    }
+}
+
+
+@media only screen and (max-width: 350px) {
+    .comments-container {
+        width: 280px;
+        margin: 1px auto 2px;
+    }
+
+    .comments-list .comment-box {
+        width: 250px;
+        float: left;
     }
 }
