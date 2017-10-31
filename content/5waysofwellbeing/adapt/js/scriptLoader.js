@@ -7,7 +7,7 @@ var pageId = stuff[stuff.length - 1];
 //var userId = loginCheck.getUserID();
 var Data = '&PageID=' + pageId ;
 var commentsHtml="";
-/*
+
 $.ajax({
     url: '/Leader/comment.php',                            
     data: Data,
@@ -17,8 +17,7 @@ $.ajax({
     commentsHtml=data;
     }
 })
-*/
- commentsHtml = '<ul id="comments-list" class="comments-list"> <li> <div class="comment-main-level" id="comment_551"> <div class="comment-avatar"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt=""></div> <div class="comment-box"> <div class="comment-head"> <h6 class="comment-name">BEN</h6> </div> <div class="comment-content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo? </div> <div class="comment-head"> <i class="fa fa-heart"></i>&nbsp;8 </div> <div class="comment-head"> <div class="comment-date">01 DECEMBER 2016</div> <a href="#" class="comment-like" id="like_551">LIKE</a> </div> </div> </div> </li> <hr class="dotted_line" /> <li> <div class="comment-main-level" id="comment_2567"> <!-- Avatar --> <div class="comment-avatar"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt=""></div> <div class="comment-box"> <div class="comment-head"> <h6 class="comment-name">JOHN</h6> </div> <div class="comment-content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo? </div> <div class="comment-head"> <i class="fa fa-heart"></i>&nbsp;9 </div> <div class="comment-head"> <div class="comment-date">31 DECEMBER 2016</div> <a href="#" class="comment-like" id="like_2567">LIKE</a> </div> </div> </div> </li> </ul>';
+
 
 
 Modernizr.load([
@@ -49,16 +48,7 @@ Modernizr.load([
 
                         return false;
                     });
-                 /*    $("#showComments").click(function () {
-                        $('#listComments').slideToggle();
-                        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
-                        if ($("#showComments > span").text() == 'SHOW COMMENTS')
-                            $("#showComments > span").text('HIDE COMMENTS');
-                        else
-                            $("#showComments > span").text('SHOW COMMENTS');
-                        return false;
-                    }); */
-                    
+               
                     $("#postComment").click(function () {
                         if ($('#comment').val().length < 5)
                             alert('You must enter at least 5 characters');

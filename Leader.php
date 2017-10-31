@@ -235,9 +235,9 @@ if(isset($_GET['pg']) && !isset($_GET['fl'])){
             while ($row = mysqli_fetch_array($result, MYSQL_BOTH)) {
              ?>
                 <div class="main" id="main">
-                    <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>"  class="lmimage" >
-                    <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
-                    <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
+                <a  href='/Leader/content/<?php echo $row['articalFolder']."/index.html#/id/". $row['pageId'];?>' target="_self"> <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>"  class="lmimage" ></a>
+                <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
+                <a  href='/Leader/content/<?php echo $row['articalFolder']."/index.html#/id/". $row['pageId'];?>' style='text-decoration: none' target="_self">  <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>    </a>                                
                     <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p>
                     <div style="margin:0 auto; border-bottom:1px dotted #000;max-width:80%;">
                         <span class="fa-stack fa-2x">
@@ -253,7 +253,7 @@ if(isset($_GET['pg']) && !isset($_GET['fl'])){
                             <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
                         </span>
                         <br/>
-                        <a  href='/Leader/content/<?php echo $row['articalFolder']."/index.html#/id/". $row['pageId'];?>' target="_self" class="button_cust"> CONTINUE READING </a>   
+                        <a  href='/Leader/content/<?php echo $row['articalFolder']."/index.html#/id/". $row['pageId'];?>' target="_self" class="button_cust" style="margin-bottom:20px;"> CONTINUE READING </a>   
 
 <!--                         <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
  -->                    </div>
@@ -287,7 +287,7 @@ $query_fl= "SELECT Title,strapline,Description,Links,Category,Filter,CapabilityT
                     <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
                     <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
                     <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p>
-                    <div style="margin:0 auto; border-bottom:1px dotted #000;max-width:80%;">
+                    <div style="margin-bottom:20px; border-bottom:1px dotted #000;max-width:80%;">
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-eye fa-stack-2x" aria-hidden="true"></i>
                             <strong class="fa-stack-1x fa-stack-text file-text">16</strong>

@@ -95,7 +95,7 @@ $(document).ready(function() {
 		</div>
 
 		<form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="/Leader/index.php">
-			<div style="max-width:80%;">
+			<div >
 			<div class="input-group add-on">
 			<input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
 			  <div class="input-group-btn">
@@ -175,10 +175,10 @@ $(document).ready(function() {
 
     <span class="headLine2">What am I doing today ?</span>
     <div class="spacer20"></div>
-    <p class="subtitle"style="max-width: 700px;">filter by the type of learning  or click one of the four leadership focus areas to discover more</p>
+    <p class="subtitle"style="max-width: 700px;">FILTER BY THE TYPE OF LEARNING OR CLICK ONE OF THE FOUR LEADERSHIP FOCUS AREAS TO DISCOVER MORE</p>
     <div class="spacer20"></div>
     
-    <div>
+    <div sytle="margin-bottom:20px;">
     
                 <select id="filter" class="form-control">
                 <option value=''>FILTER BY</option>
@@ -285,7 +285,7 @@ if(isset($_GET['fl'])){
                 
               </div>
 <!-- Here Comment, Rating, like and read comment Part starting -->
-
+<!-- 
               <div class="aria-live-assertive" aria-live="assertive">
 </div>
     <div class="page content-container">
@@ -349,7 +349,7 @@ if(isset($_GET['fl'])){
                 </div>
 
 
-        </div>
+        </div> -->
          
 <!-- Here Comment, Rating, like and read comment Part ending -->
 
