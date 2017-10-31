@@ -48,7 +48,7 @@ if (!$result_rating) {
 		if ($loadcount==0)
 			{
 			echo "page";
-			$loadInsertQuery="INSERT INTO usertracking (UserId,pageId,pageName,InTime,OutTime,PageCategory,onDate) values('" . mysqli_real_escape_string($link, $_POST['UserId']) . "','" . mysqli_real_escape_string($link, $_POST['PageID']) . "','pagename',now(),'','PageCategory','".$date."')";
+			$loadInsertQuery="INSERT INTO usertracking (UserId,pageId,pageName,InTime,OutTime,PageCategory,onDate) values('" . mysqli_real_escape_string($link, $_POST['UserId']) . "','" . mysqli_real_escape_string($link, $_POST['PageID']) . "','pagename',now(),'','".mysqli_real_escape_string($link,$_POST['pgCat'])."','".$date."')";
 			mysqli_query($link,$loadInsertQuery);
 	
 		}

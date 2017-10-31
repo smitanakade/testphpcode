@@ -6,6 +6,7 @@ $(document).ready(function () {
     var full_url = document.URL;
     var stuff = full_url.split('/');
     var pageId = stuff[stuff.length - 1];
+    var pageCat= stuff[stuff.length -2];
     var userId = loginCheck.getUserID();
 
     var Data = '&PageID=' + pageId + '&UserId=' + userId + '&Flag=page';
@@ -17,7 +18,6 @@ $(document).ready(function () {
         success: function (data) {
         //From following code pulling total like for the particular page
          var obj=jQuery.parseJSON(data);
-         console.log(obj);
         html='<span id="pagelike">'+obj.pagelike+'</span>';
         $('#totalLike').append(html);   
        /*  if(obj.rating !=0){
@@ -130,25 +130,17 @@ $(document).ready(function () {
             }
         });
     }
-    var recod='&PageID=' + pageId + '&UserId=' + userId + '&Flag=unload';
+    var recod='&PageID=' + pageId + '&UserId=' + userId + '&Flag=unload&pgCat='+pageCat;
     $(window).unload(function() {
-        console.log(recod);
          $.ajax({
             url: "/Leader/PageComments.php",
             type: "POST",
             data: recod,
             async : false,
-            success: function (data) {    
-                console.log(data); 
-            }      
+               
         }); 
-        console.log("after ajax call"); 
-        
 });
-$(window).on('beforeunload',function(){
-    console.log('Before BYE');
-    
-});
+
    
 });
 
