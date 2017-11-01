@@ -8,24 +8,25 @@
     <meta name="format-detection" content="telephone=no">
     <title>Myer Academy</title>
 
-    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../Leader/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../Leader/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../Leader/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
     <!-- <link href="/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/> -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="/Leader/assets/css/menu.css" rel="stylesheet" type="text/css" />
+  <link href="../Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="../Leader/assets/css/menu.css" rel="stylesheet" type="text/css" />
+  <link href="../Leader/assets/css/comments.css" rel="stylesheet" type="text/css" media="all"/>
 
-    <script src="/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
-    <script src="/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
-    <script src="/Leader/assets/js/Leadersearch.js"></script>
-    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-     <script src="/Leader/assets/js/contentPage.js"></script>
- 	<script type="application/javascript" src="/Leader/assets/js/menu.js"></script>
+    <script src="../Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
+    <script src="../Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
+    <script src="../Leader/assets/js/Leadersearch.js"></script>
+    <link href="../Leader/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+     <script src="../Leader/assets/js/contentPage.js"></script>
+ 	<script type="application/javascript" src="../Leader/assets/js/menu.js"></script>
 <!--     <script src="/Leader/assets/js/getActivity.js"></script>
  -->
  <script>
@@ -196,6 +197,16 @@ $(document).ready(function() {
     <div >
    
     
+
+		<div class="links-item-container" align="center">
+			<i class="fa fa-fw fa-eye faView"></i><span class="faViewText" id="noViews">500</span>
+			<i class="fa fa-fw fa-heart faView"></i><span class="faViewText" id="noLikes">20</span>
+			<i class="fa fa-fw fa-comment faView"></i><span class="faViewText" id="noComments">12</span>
+		</div>
+														
+			
+        </div>
+
    
    <!-- SearchResultDiv will show search result dynamically start here added by SMITA RXP-->
 <div class="SearchResultDiv" id="SearchResultDiv"></div>
@@ -365,13 +376,13 @@ if(isset($_GET['fl'])){
     </div>
 </div>
 
-<script type="application/javascript" src="/assets/js/config.js"></script>
-<script type="text/javascript" src="/Leader/assets/js/functions.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-2.1.3.min.js"></script>
-<script src="/assets/js/jquery.swipeshow.min.js"></script>
-<script type="application/javascript" src="/assets/js/es6-promise-polyfill.js"></script>
-<script type="application/javascript" src="/assets/js/axios.js"></script>
-<script type="application/javascript" src="/assets/js/stafflogin.js"></script>
+<script type="application/javascript" src="../Leader/assets/js/config.js"></script>
+<script type="text/javascript" src="../Leader/assets/js/functions.js"></script>
+<script type="text/javascript" src="../Leader/assets/js/jquery-2.1.3.min.js"></script>
+<script src="../Leader/assets/js/jquery.swipeshow.min.js"></script>
+<script type="application/javascript" src="../Leader/assets/js/es6-promise-polyfill.js"></script>
+<script type="application/javascript" src="../Leader/assets/js/axios.js"></script>
+<script type="application/javascript" src="../Leader/assets/js/stafflogin.js"></script>
 
 <script>
 /*
