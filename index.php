@@ -374,7 +374,7 @@ if(isset($_GET['fl'])){
 <script type="application/javascript" src="/assets/js/stafflogin.js"></script>
 
 <script>
-
+/*
     var loginCheck = new StaffLogin(loginConfig);
     loginCheck.checkIfLoggedIn(function (isLoggedIn) {
         if (isLoggedIn) {
@@ -383,7 +383,7 @@ if(isset($_GET['fl'])){
             redirect();
         }
     })
-
+*/
     $(document).ready(function () {
 		$(".dynamicMenu").html(parseMenu('<?php echo $jsonMenu?>'));
 		initMenu();
@@ -424,7 +424,7 @@ if(isset($_GET['fl'])){
 
     function logout() {
         loginCheck.logout();
-        redirect();
+        //redirect();
     }
 
     (function (i, s, o, g, r, a, m) {
