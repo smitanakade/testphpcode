@@ -8,27 +8,23 @@
     <meta name="format-detection" content="telephone=no">
     <title>Myer Academy</title>
 
-    <link href="../Leader/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../Leader/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../Leader/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
     <!-- <link href="/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/> -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="../Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="../Leader/assets/css/menu.css" rel="stylesheet" type="text/css" />
-  <link href="../Leader/assets/css/comments.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/Leader/assets/css/menu.css" rel="stylesheet" type="text/css" />
 
-    <script src="../Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
-    <script src="../Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
-    <script src="../Leader/assets/js/Leadersearch.js"></script>
-    <link href="../Leader/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-     <script src="../Leader/assets/js/contentPage.js"></script>
- 	<script type="application/javascript" src="../Leader/assets/js/menu.js"></script>
-<!--     <script src="/Leader/assets/js/getActivity.js"></script>
- -->
+    <script src="/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
+    <script src="/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
+    <script src="/Leader/assets/js/Leadersearch.js"></script>
+    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+ 	<script type="application/javascript" src="/Leader/assets/js/menu.js"></script>
  <script>
 $(document).ready(function() {
     $('#filter').change(function() {
@@ -61,7 +57,6 @@ $(document).ready(function() {
 	<!--CSS Style-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
-    <?php //include_once("dbconnect.php");?>
 
     <?php // include_once("analyticstracking.php") ?>
 
@@ -71,7 +66,6 @@ $(document).ready(function() {
 
 </head>
 
-<!-- <body onresize="resize(),slidersize()" onload="resize(),slidersize()"> -->
 <body>
 <div class="menustatus"></div>
 
@@ -95,16 +89,17 @@ $(document).ready(function() {
 			</div>
 		</div>
 
-		<form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="/Leader/index.php">
-			<div >
-			<div class="input-group add-on">
-			<input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
-			  <div class="input-group-btn">
-				<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-			  </div>
-			</div>
-			</div>
-        <br>
+        <form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="<?php  echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
+        <div style="max-width:80%;">
+            <div class="input-group add-on">
+          <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+          </div>
+        </div>
+    </div>
+      
+        <br/>
 		<div class="spacer20"></div>
 		</form>
 
@@ -197,16 +192,6 @@ $(document).ready(function() {
     <div >
    
     
-
-		<div class="links-item-container" align="center">
-			<i class="fa fa-fw fa-eye faView"></i><span class="faViewText" id="noViews">500</span>
-			<i class="fa fa-fw fa-heart faView"></i><span class="faViewText" id="noLikes">20</span>
-			<i class="fa fa-fw fa-comment faView"></i><span class="faViewText" id="noComments">12</span>
-		</div>
-														
-			
-        </div>
-
    
    <!-- SearchResultDiv will show search result dynamically start here added by SMITA RXP-->
 <div class="SearchResultDiv" id="SearchResultDiv"></div>
@@ -241,21 +226,6 @@ if(isset($_GET['fl'])){
                         <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
                         <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p></a>
                         <div style="margin:0 auto; border-bottom:1px dotted #000;max-width:80%;">
-                            
-                        <span class="fa-stack fa-2x">
-                                <i class="fa fa-eye fa-stack-2x" aria-hidden="true"></i>
-                                <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
-                            </span>
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa fa-heart fa-stack-2x"></i>
-                                <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
-                            </span>
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-comment fa-stack-2x"></i>
-                                <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
-                            </span>
-                           
-
 
     <!--                         <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
      -->                    </div>
@@ -271,7 +241,7 @@ if(isset($_GET['fl'])){
     
 ?>
 
-        <div align="center" style="padding:25px 8px;background:#f5f5f5">
+        <div align="center" style="padding:7px 8px;background:#f5f5f5">
             <div style="max-width:1600px;">
             <a href="/Leader/Leader.php?pg=LEADING SELF" >
                 <div  class="LeaderHome">
@@ -366,26 +336,26 @@ if(isset($_GET['fl'])){
 
 
 
-              
+   <!--            
          <div id="footer">
             &copy 2016 www.myeracademy.com.au<br><br>
             <img src="/Leader/assets/images/arrow_up.png" style="margin:20px 0px" class="pointer" onclick="scrolltotop()">
-        </div> 
+        </div>  -->
 
 
     </div>
 </div>
 
-<script type="application/javascript" src="../Leader/assets/js/config.js"></script>
-<script type="text/javascript" src="../Leader/assets/js/functions.js"></script>
-<script type="text/javascript" src="../Leader/assets/js/jquery-2.1.3.min.js"></script>
-<script src="../Leader/assets/js/jquery.swipeshow.min.js"></script>
-<script type="application/javascript" src="../Leader/assets/js/es6-promise-polyfill.js"></script>
-<script type="application/javascript" src="../Leader/assets/js/axios.js"></script>
-<script type="application/javascript" src="../Leader/assets/js/stafflogin.js"></script>
+<script type="application/javascript" src="/assets/js/config.js"></script>
+<script type="text/javascript" src="/Leader/assets/js/functions.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-2.1.3.min.js"></script>
+<script src="/assets/js/jquery.swipeshow.min.js"></script>
+<script type="application/javascript" src="/assets/js/es6-promise-polyfill.js"></script>
+<script type="application/javascript" src="/assets/js/axios.js"></script>
+<script type="application/javascript" src="/assets/js/stafflogin.js"></script>
 
 <script>
-/*
+
     var loginCheck = new StaffLogin(loginConfig);
     loginCheck.checkIfLoggedIn(function (isLoggedIn) {
         if (isLoggedIn) {
@@ -394,7 +364,7 @@ if(isset($_GET['fl'])){
             redirect();
         }
     })
-*/
+
     $(document).ready(function () {
 		$(".dynamicMenu").html(parseMenu('<?php echo $jsonMenu?>'));
 		initMenu();
@@ -435,7 +405,7 @@ if(isset($_GET['fl'])){
 
     function logout() {
         loginCheck.logout();
-        //redirect();
+        redirect();
     }
 
     (function (i, s, o, g, r, a, m) {

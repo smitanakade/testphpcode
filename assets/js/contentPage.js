@@ -1,8 +1,5 @@
 $(document).ready(function () {
-    //hiding comments div on pageload
-    $('#writecommentsdiv').hide();
-    $('#readcommentsdiv').hide();
-    //capturing pageID and username for each page visit
+  //capturing pageID and username for each page visit
     var full_url = document.URL;
     var stuff = full_url.split('/');
     var pageId = stuff[stuff.length - 1];
@@ -20,39 +17,15 @@ $(document).ready(function () {
          var obj=jQuery.parseJSON(data);
         html='<span id="pagelike">'+obj.pagelike+'</span>';
         $('#totalLike').append(html);   
-       /*  if(obj.rating !=0){
-            //Here pulling rating for the particular page given by login user 
-            $('input:radio[class=rating-input][id=rating-input-1-'+obj.rating+']').prop('checked', true);
-           } */
+    
         },
         error: function (data) {
             console.log(data);
         }
     });
 
-    $('#btnlike').click(function () {
-        var pageLike = 'like';
-        $('#btnlike').hasClass('active') ? pageLike = 'like' : pageLike = '';
-        //data to post
-        var data = '&PageID=' + pageId + '&UserId=' + userId + '&PageLike=' + pageLike + '&Flag=like';
-        //code to send data to php file
-        ajaxCall(data)
-    });
+ 
 
-   /*  $('#rating').click(function () {
-
-        var rating = $('input:radio[name=rating]:checked').val();
-        //make the postdata
-        var data = '&PageID=' + pageId + '&UserId=' + userId + '&Rating=' + rating + '&Flag=rating';
-
-        //code to send data to php file
-        ajaxCall(data)
-    }); */
-
-    $('#btnwrtcmts').click(function () {
-        $('#writecommentsdiv').show();
-        $('#readcommentsdiv').hide();
-    });
     $('#btnrdcmts').click(function () {
         $('#readcommentsdiv').show();
         $('#writecommentsdiv').hide();

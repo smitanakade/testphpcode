@@ -18,20 +18,20 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="/../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
 
-    <link href="../../../assets/css/styles.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../../assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../../assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../../assets/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../../assets/css/scroll.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../../assets/css/menu.css" rel="stylesheet" type="text/css" />
-    <link href="../../../assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
-    
-    <!--<script src="../../assets/js/contentPage.js"></script>-->
-    <script src="../../assets/js/menu.js"></script>
-    <link href="../../assets/css/comments.css" type="text/css" rel="stylesheet" />
+    <script src="/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
+    <script src="/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
+    <link href="/Leader/assets/css/styles.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Leader/assets/css/styles_layers.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Leader/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Leader/assets/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="/Leader/assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+      <script src="/Leader/assets/js/menu.js"></script>
+    <link href="/Leader/assets/css/comments.css" type="text/css" rel="stylesheet" />
     
     <style>
         .nav > li > a {
@@ -40,79 +40,90 @@
     </style>
 </head>
 
+    <script type="text/javascript" src="/Leader/assets/js/activitySection.js"></script>
+    <script type="text/javascript" src="/Leader/assets/js/contentPage.js"></script>
+    
+    
+    <style>
+        .nav > li > a {
+            display: inline !important;
+        }
+    </style>
+</head>
 <body>
-        <div id="wrapper">
-            <nav class="navigation-container">
-                
+    <div id="wrapper">
+        <nav class="navigation-container">
+            
 
-                <div class="menustatus"></div>
+            <div class="menustatus"></div>
 
-                <div id="mainmenu" align="left">
+            <div id="mainmenu" align="left">
 
-                    <div align="center">
+                <div align="center">
 
-                        <div class="beforeTopHeader">
-                            <div class="topHeader">
-                                <ul class="nav navbar-nav">
-                                    <li class="text-center">
-                                        <a href="/Leader/index.php"><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
-                                    </li>
-                                    <li class="text-center">
-                                        <a href="mailto:myeracademy@myer.com.au"><i class="fa fa-lg fa-envelope-o"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">GET IN TOUCH</span></a>
-                                    </li>
-                                    <li class="text-center">
-                                        <a href="#" onclick="logout()"><i class="fa fa-lg fa-sign-out"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">SIGN OUT</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="/Leader/index.php">
-                            <div style="max-width:80%;">
-                                <div class="input-group add-on">
-                                    <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="spacer20"></div>
-                        </form>
-
-                    </div>
-                    <div class="scrollcontainer scrollheight2">
-                        <div class="scrollpanel">
-                            <div id="mainmenuinner" style="max-width:1200px;width:100%">
-
-
-                                <!-- dynamicMenu here adding menu dynamically added by SMITA RXP-->
-                                <div class="dynamicMenu">
-                                </div>
-                                <!-- dynamicMenu here adding menu dynamically added by SMITA RXP -->
-
-
-                            </div>
+                    <div class="beforeTopHeader">
+                        <div class="topHeader">
+                            <ul class="nav navbar-nav">
+                                <li class="text-center">
+                                    <a href="/Leader/index.php"><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="mailto:myeracademy@myer.com.au"><i class="fa fa-lg fa-envelope-o"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">GET IN TOUCH</span></a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#" onclick="logout()"><i class="fa fa-lg fa-sign-out"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">SIGN OUT</span></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div style="width:100%;max-width:1200px;height:35px;margin-top:10px;display:block;background:rgba(156,156,156,0);cursor:pointer"
-                         align="center" onclick="openmenu()">
-                        <img src="/assets/images/arrow_up2.png"
-                             style="margin:5px 0px 0px 0px;cursor:pointer;width:55px">
+
+                    <form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="/Leader/index.php">
+                        <div style="max-width:80%;">
+                            <div class="input-group add-on">
+                                <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                     <!--    <br>
+                        <div class="spacer20"></div> -->
+                    </form>
+
+                </div>
+                <div class="scrollcontainer scrollheight2">
+                    <div class="scrollpanel">
+                        <div id="mainmenuinner" style="max-width:1200px;width:100%">
+
+
+                            <!-- dynamicMenu here adding menu dynamically added by SMITA RXP-->
+                            <div class="dynamicMenu">
+                            </div>
+                            <!-- dynamicMenu here adding menu dynamically added by SMITA RXP -->
+
+
+                        </div>
                     </div>
+                </div>
+                <div style="width:100%;max-width:1200px;height:35px;margin-top:10px;display:block;background:rgba(156,156,156,0);cursor:pointer"
+                     align="center" onclick="openmenu()">
+                    <img src="/assets/images/arrow_up2.png"
+                         style="margin:5px 0px 0px 0px;cursor:pointer;width:55px">
+                </div>
+        </div>
+
+            <div class="menu pointer" align="center" onclick="openmenu()">
+                <!-- <img src="/Leader/assets/images/hamburger1.png" style="width:26px;float:left;margin:13px 0px 0px 10px"> -->
+
+                <a href="#" class="bar"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+
+                <img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
             </div>
 
-                <div class="menu pointer" align="center" onclick="openmenu()">
-                    <!-- <img src="/Leader/assets/images/hamburger1.png" style="width:26px;float:left;margin:13px 0px 0px 10px"> -->
+    </nav>
 
-                    <a href="#" class="bar"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+    </div>
 
-                    <img src="../../assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
-                </div>
-
-        </nav>
-
-        </div>
 
         <div class="page-container" id="customComponent" style="display:none;">
             <div class="page-background-container"></div>
@@ -134,10 +145,11 @@
 
                                                 <div class="links-widget component-widget">
                                                     <div class="links-item component-item clearfix top">
-                                                        <div class="links-item-container" align="center">
-                                                            <i class="fa fa-fw fa-eye faView"></i><span class="faViewText" id="noViews">500</span>
+                                                        <div class="links-item-container" id="pgActivity" align="center">
+                                                            <!--<i class="fa fa-fw fa-eye faView"></i><span class="faViewText" id="noViews">500</span>
                                                             <i class="fa fa-fw fa-heart faView"></i><span class="faViewText" id="noLikes">20</span>
                                                             <i class="fa fa-fw fa-comment faView"></i><span class="faViewText" id="noComments">12</span>
+                                                            -->
                                                         </div>
                                                         <br/>
                                                         <hr class="dotted_line" />
@@ -203,19 +215,20 @@
 
         <div class="aria-live-assertive" aria-live="assertive">
         </div>
-        <script type="application/javascript" src="../../assets/js/config.js"></script>
-        <script type="text/javascript" src="../../assets/js/functions.js"></script>
+        <script type="application/javascript" src="/assets/js/config.js"></script>
+        <script type="text/javascript" src="/assets/js/functions.js"></script>
         <script src="libraries/raphael.js" type="text/javascript" language="javascript"></script>
         <script src="libraries/modernizr.js" type="text/javascript" language="javascript"></script>
         <script src="libraries/pdfmake.js" type="text/javascript" language="javascript"></script>
         <script src="libraries/vfs_fonts.js" type="text/javascript" language="javascript"></script>
-        <script type="application/javascript" src="../../assets/js/axios.js"></script>        
-        <script type="application/javascript" src="../../assets/js/stafflogin.js"></script>
+        <script type="application/javascript" src="/assets/js/axios.js"></script>        
+        <script type="application/javascript" src="/assets/js/stafflogin.js"></script>
         <script src="adapt/js/scriptLoader.js" type="text/javascript" language="javascript"></script>
         
         
+        
         <script>
-    /*  
+      
     var loginCheck = new StaffLogin(loginConfig);
     loginCheck.checkIfLoggedIn(function (isLoggedIn) {
         if (isLoggedIn) {
@@ -273,7 +286,7 @@
     ga('create', 'UA-85609472-1', 'auto');
     ga('send', 'pageview');
 
-*/
+
         
 </script>        
 </body>

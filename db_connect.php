@@ -2,11 +2,9 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "myeracademy";
+$dbname = "myerdb";
 
-$link = mysqli_connect($servername, $username, $password,$dbname);
-if(!$link){
-    die('Could not connect: ' . mysql_error());
-}
+$link = mysqli_connect("localhost", "root", "", "myerdb");
+
 
 ?>

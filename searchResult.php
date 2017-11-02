@@ -158,34 +158,10 @@ $(document).ready(function() {
       </div>
     </div>
 </div>
-  <!-- 
-    <br/>
-    <div class="spacer20"></div> -->
-<!-- HeroImage START -->
-<!--<div class="slideshow swipeshow slidersize pointer" style="margin-top:0px;overflow:hidden">-->
-<!--             <img src="/Leader/assets/images/<?php //echo $ImageName;?>.jpeg" class="LeaderHeroImg">
- -->      
-<!--</div>-->
-<!-- <div class="LeaderHearoContent">
-            These learning moments have been crafted especially for your mobile device. Immerse yourself in the world we
-            love and take your&nbsp;moment&nbsp;to&nbsp;shine.
-</div>
-       -->  <!-- // Hero -->
-    <!--     <div class="spacer20"></div>
-    <span class="headLine2">What am I doing today ?</span>
-    <div class="spacer20"></div>
-     -->
+ 
     <div>
     
-           <!--      <select id="filter" class="form-control">
-                <option value=''>FILTER BY</option>
-                        <option value='watch' >WATCH</option>
-                        <option value='LISTEN'>LISTEN</option>
-                        <option value='READ'>READ</option>
-                        <option value='READ'>DO</option>
-                        <option value='REFLECT'>REFLECT</option>
-                        
-                      </select> -->
+          
                       </div>
   </form>
 
@@ -218,29 +194,39 @@ if(isset($_GET['sh'])){
         $rowcount=mysqli_num_rows($result);
         if($rowcount){
             while ($row = mysqli_fetch_array($result, MYSQL_BOTH)) {
-             ?>
-                <div class="main" id="main"><a href='/Leader/content/<?php echo $row['articalFolder']."/index.html#/id/". $row['pageId'];?>' style="text-decoration: none; color:#000;"> 
-                    <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>" style="max-width:100%" >
-                    <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
-                    <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>                                    
-                    <p style="text-align:center;padding:5px;max-width:800px; font-family:ApercuLight"><?php echo $row['Description']; ?></p></a>
-                    <div style="margin:0 auto; border-bottom:1px dotted #000;max-width:80%;">
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-eye fa-stack-2x" aria-hidden="true"></i>
-                            <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
-                        </span>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa fa-heart fa-stack-2x"></i>
-                            <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
-                        </span>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-comment fa-stack-2x"></i>
-                            <strong class="fa-stack-1x fa-stack-text file-text">16</strong>
-                        </span>
-<!--                         <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
- -->                    </div>
-                </div>
-        <?php
+                ?>
+                   <div class="main" id="main">
+                   <a  href='/Leader/content/<?php echo $row['articalFolder']."/index.html#/id/". $row['pageId'];?>' target="_self"> <img  src="/Leader/assets/images/<?php echo $row['imageName'];?>"  class="lmimage" ></a>
+                   <h2 class="subtitle"><?php echo $row['strapline']; ?></h2>
+                   <a  href='/Leader/content/<?php echo $row['articalFolder']."/index.html#/id/". $row['pageId'];?>' style='text-decoration: none' target="_self">  <h1 class="headLine2"><u style=" text-decoration: none;border-bottom: 1px solid #939393;"><?php echo $row['Title']; ?></u></h1>    </a>                                
+                       <p style="text-align:center;padding:5px;max-width:800px;font-family:ApercuLight;"><?php echo $row['Description']; ?></p>
+                       <div style="/*margin:0 auto;*/ border-bottom:1px dotted #000;/*max-width:80%;*/">
+                           <div class="links-item-container" align="center">
+                           <?php 
+                               $getCommentQuery="SELECT count(comment) as comment FROM articalactivity WHERE comment !='' and pageId='".$row['pageId']."'";
+                               $resultComent = mysqli_query($link, $getCommentQuery);
+                               $rowCmt = mysqli_fetch_assoc($resultComent);
+                           ?>
+                           <i class="fa fa-fw fa-eye faView"></i><span class="faViewText" id="noViews"><?php echo $rowCmt['comment'];?></span>
+                           <?php
+                               $getLikequery="SELECT count(pageLike)as pgLike FROM articalactivity WHERE pageLike !='' and PageId='".$row['pageId']."'";
+                               $resultlike = mysqli_query($link, $getLikequery);
+                               $rowLike = mysqli_fetch_assoc($resultlike);?> 
+                           <i class="fa fa-fw fa-heart faView"></i><span class="faViewText" id="noLikes"><?php echo $rowLike['pgLike'];?></span>
+                           <?php
+                               $getViewquery="SELECT count(pageId) as pgView FROM usertracking WHERE pageId='".$row['pageId']."'";
+                               $resultView = mysqli_query($link, $getViewquery);
+                               $rowView = mysqli_fetch_assoc($resultView);
+                           ?>
+                           <i class="fa fa-fw fa-comment faView"></i><span class="faViewText" id="noComments"><?php echo $rowView['pgView'];?></span>
+                           </div>
+                           <br/>
+                           <a  href='/Leader/content/<?php echo $row['articalFolder']."/index.html#/id/". $row['pageId'];?>' target="_self" class="button_cust" style="margin-bottom:20px;"> CONTINUE READING </a>   
+   
+   <!--                         <div class="keyword"><span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span>|<span>keyword1</span></div>
+               --> </div>           
+                   </div>
+           <?php
             }
         }
         else{
