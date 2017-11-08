@@ -1,32 +1,32 @@
 @font-face {
     font-family: "MillerBannerItalic";
-    src: url("/Leader/assets/fonts/FontBureau-MillerBannerItalic.eot");
+    src: url("/myer/Leader/assets/fonts/FontBureau-MillerBannerItalic.eot");
     src: 
-    url("/Leader/assets/fonts/FontBureau-MillerBannerItalic.woff") format("woff"),
-    url("/Leader/assets/fonts/FontBureau-MillerBannerItalic.woff2") format("woff2"),
-    url("/Leader/assets/fonts/FontBureau-MillerBannerItalic.ttf") format("truetype"),
-    url("/Leader/assets/fonts/FontBureau-MillerBannerItalic.otf") format("opentype"),
-    url("/Leader/assets/fonts/FontBureau-MillerBannerItalic.svg") format("svg");
+    url("/myer/Leader/assets/fonts/FontBureau-MillerBannerItalic.woff") format("woff"),
+    url("/myer/Leader/assets/fonts/FontBureau-MillerBannerItalic.woff2") format("woff2"),
+    url("/myer/Leader/assets/fonts/FontBureau-MillerBannerItalic.ttf") format("truetype"),
+    url("/myer/Leader/assets/fonts/FontBureau-MillerBannerItalic.otf") format("opentype"),
+    url("/myer/Leader/assets/fonts/FontBureau-MillerBannerItalic.svg") format("svg");
     }
 
 @font-face {
         font-family: "MillerBanner-Roman";
-        src: url("/Leader/assets/fonts/MillerBanner-Roman.eot");
+        src: url("/myer/Leader/assets/fonts/MillerBanner-Roman.eot");
         src: 
-        url("/Leader/assets/fonts/MillerBanner-Roman.woff") format("woff"),
-        url("/Leader/assets/fonts/MillerBanner-Roman.woff2") format("woff2"),
-        url("/Leader/assets/fonts/MillerBanner-Roman.ttf") format("truetype"),
-        url("/Leader/assets/fonts/MillerBanner-Roman.otf") format("opentype"),
-        url("/Leader/assets/fonts/MillerBanner-Roman.svg") format("svg");
+        url("/myer/Leader/assets/fonts/MillerBanner-Roman.woff") format("woff"),
+        url("/myer/Leader/assets/fonts/MillerBanner-Roman.woff2") format("woff2"),
+        url("/myer/Leader/assets/fonts/MillerBanner-Roman.ttf") format("truetype"),
+        url("/myer/Leader/assets/fonts/MillerBanner-Roman.otf") format("opentype"),
+        url("/myer/Leader/assets/fonts/MillerBanner-Roman.svg") format("svg");
       }
     @font-face {
         font-family: "SackersGothicLight";
-        src: url("/Leader/assets/fonts/Monotype  - Sackers Gothic Light.ttf");
+        src: url("/myer/Leader/assets/fonts/Monotype  - Sackers Gothic Light.ttf");
         
         }
 @font-face{
     font-family: "ApercuLight";
-    src:url("/Leader/assets/fonts/Apercu Light.ttf");
+    src:url("/myer/Leader/assets/fonts/Apercu Light.ttf");
 }
           
 .main{

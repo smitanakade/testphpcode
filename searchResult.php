@@ -1,3 +1,12 @@
+
+<?php if(!$_GET['sh']){
+    header("Location: /Leader/index.php");
+    }
+    
+    ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -107,6 +116,7 @@
             </div>
         </div>
     </div>
+
     <div style="width:100%;max-width:1200px;height:35px;margin-top:10px;display:block;background:rgba(156,156,156,0);cursor:pointer"
          align="center" onclick="openmenu()"><img src="/assets/images/arrow_up2.png"
                                                   style="margin:5px 0px 0px 0px;cursor:pointer;width:55px"></div>
@@ -150,10 +160,13 @@
     <div >
    
     
+   
 
 
     <div id="content">
      
+   
+
    
 
 <div align="center" style="padding:25px 8px;background:#FFF;">
@@ -233,7 +246,10 @@ if($search!='')
 </div>
 
 <script type="application/javascript" src="/assets/js/config.js"></script>
+
 <script type="text/javascript" src="/Leader/assets/js/functions.js"></script>
+
+
 <script type="text/javascript" src="/assets/js/jquery-2.1.3.min.js"></script>
 <script src="/assets/js/jquery.swipeshow.min.js"></script>
 <script type="application/javascript" src="/assets/js/es6-promise-polyfill.js"></script>
@@ -252,10 +268,12 @@ if($search!='')
     })
 
     $(document).ready(function () {
+
 		$(".dynamicMenu").html(parseMenu('<?php echo $jsonMenu?>'));
 		initMenu();
         $(this).scroll(function () {
             scrollPage();
+
 
 
         });

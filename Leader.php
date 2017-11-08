@@ -1,7 +1,7 @@
 <?php if(!$_GET['pg']){
     header("Location: /Leader/index.php");
     }else{
-       $ImageName = str_replace (' ', '', $_GET['pg']);        
+        $ImageName = str_replace (' ', '', $_GET['pg']);        
     }
     include('db_connect.php');    
     ?>
@@ -21,6 +21,7 @@
     <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
     <script type="application/javascript" src="/Leader/assets/js/contentPage.js"></script>
+
   
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -34,6 +35,7 @@
  	<script type="application/javascript" src="/Leader/assets/js/menu.js"></script>
  <script>
 $(document).ready(function() {
+
     $('#filter').change(function(e) {
     var filter = $('#filter').find(":selected").text();
       var uriParameters = location.search.substr(1).split('&');
@@ -42,7 +44,7 @@ $(document).ready(function() {
            var parameter = uriParameters[i].split('=');
            $('#leadSearch').attr('action', '/Leader/Leader.php?'+uriParameters[0]+'&fl='+filter).submit(); 
          }
-     
+  
 });
 });
  </script>
@@ -70,6 +72,7 @@ $(document).ready(function() {
     <?php //include_once("analyticstracking.php") ?>
    
 	<?php 
+
 		$jsonMenu = file_get_contents('http://52.65.147.55/webapi/content.php');
 	?>
 
@@ -77,12 +80,14 @@ $(document).ready(function() {
 <body>
 <div class="menustatus"></div>
 
+
 <div class="menustatus"></div>
 
 <div id="mainmenu" align="left">
    
 	
 		<div class="beforeTopHeader">
+
 				<ul class="nav navbar-nav">
 					<li class="text-center">
 						<a href="/Leader/index.php"><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
@@ -94,6 +99,7 @@ $(document).ready(function() {
 						<a href="#" onclick="logout()"><i class="fa fa-lg fa-sign-out"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">SIGN OUT</span></a>
 					</li>
 				</ul>
+
 			
 		</div>
         <div class="sch">
@@ -109,6 +115,7 @@ $(document).ready(function() {
           
             </form>
             </div>
+
 
     <div class="scrollcontainer scrollheight2">
         <div class="scrollpanel">
@@ -140,13 +147,10 @@ $(document).ready(function() {
     <img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
 </div>
 
-    
-
 <div align="center">
 
     <div style="max-width:100%;min-height:70px;border-bottom:1px solid #000;"><img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" ></div>
-    <div class="beforeTopHeader">
-  
+    <div class="beforeTopHeader">  
        
       <span   class="headLine">MYER LEADERS PORTAL</span>
       <h2  class="subtitle">OWN YOUR LEADERSHIP POTENTIAL</h2>
@@ -162,6 +166,7 @@ $(document).ready(function() {
 </div>
 </div>
     <!-- Body search option ending here -->
+
 
 <br/>
     <div class="spacer20"></div>
@@ -194,12 +199,13 @@ if ($result_content = mysqli_query($link, $sql_content)) {
         <div class="spacer20"></div>
         <p class="subtitle"style="max-width: 700px;">FILTER BY THE TYPE OF LEARNING OR CLICK ONE OF THE FOUR LEADERSHIP FOCUS AREAS TO DISCOVER MORE</p>
         <div class="spacer20"></div>
+
     
     <div>
     
                 <select id="filter" class="form-control">
                         <option value=''>FILTER BY</option>
-                        <option value='watch' >WATCH</option>
+        <option value='watch' >WATCH</option>
                         <option value='LISTEN'>LISTEN</option>
                         <option value='READ'>READ</option>
                         <option value='READ'>DO</option>
@@ -385,7 +391,6 @@ $pg=$_GET['pg'];
         }
     })
 
-   
     $(document).ready(function () {
 		$(".dynamicMenu").html(parseMenu('<?php echo $jsonMenu?>'));
 		initMenu();

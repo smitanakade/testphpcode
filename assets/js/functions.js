@@ -6,25 +6,56 @@ function scrolltoabout()	{	$("html, body").animate({scrollTop: $('#myeracademyab
 function scrolltowelcome()	{	$("html, body").animate({scrollTop: $('#myeracademywelcome').offset().top}, 1000); }
 
 
-function openmenu()		{	var menustatus = $('.menustatus').width();
-								var mainmenuh = $('#mainmenu').height();
-								var mainmenuh2 = 0-mainmenuh-110;
-									
-								if (menustatus == 5) 
-								{
-								$('#mainmenu').animate({marginTop: "0px"},800);
-								$('.menustatus').css("width","10");
-								$('#mainmenu').css("opacity","1");
-								}
-								
-								if (menustatus == 10) {
-								$('#mainmenu').animate({marginTop: mainmenuh2},600);
-								$('.menustatus').css("width","5");
-								}
-								
-								resize();
-								
-								}
+function scrollPage() {
+   
+    var pagew = window.innerWidth;
+    var sheight = $(window).scrollTop();
+
+    if (sheight >= 300) {
+        $('.menu').css("background", "rgba(255,255,255,.9)");
+        $('.menu').css("box-shadow", "0px 0px 15px rgba(255,255,255,.7)");
+        $('.logo-myeracademy2').css("opacity", "1");
+    }
+
+    else if ($('.menustatus').width() == 5) {
+        $('.menu').css("background", "rgba(255,255,255,0)");
+        $('.menu').css("box-shadow", "0px 0px 15px rgba(255,255,255,0)");
+        $('.logo-myeracademy2').css("opacity", "0");
+    }
+
+    if (sheight >= 150) {
+        if (pagew <= 640) {
+
+            $('.menu').css("background", "rgba(255,255,255,.9)");
+            $('.menu').css("box-shadow", "0px 0px 15px rgba(255,255,255,.7)");
+            $('.logo-myeracademy2').css("opacity", "1");
+        }
+    }
+
+}
+
+function openmenu() {
+
+    var menustatus = $('.menustatus').width();
+    var mainmenuh = $('#mainmenu').height();
+    var mainmenuh2 = 0 - mainmenuh - 110;
+
+    if (menustatus == 5) {
+        $('#mainmenu').animate({ marginTop: "0px" }, 800);
+        $('.menustatus').css("width", "10");
+        $('#mainmenu').css("opacity", "1");
+        $('.logo-myeracademy2').css("opacity", "1");
+    }
+
+    if (menustatus == 10) {
+        $('#mainmenu').animate({ marginTop: mainmenuh2 }, 600);
+        $('.menustatus').css("width", "5");
+        scrollPage();
+    }
+
+    resize();
+
+}
 
 
 function resizesplash()		{	  var pageh=window.innerHeight;	
@@ -45,11 +76,11 @@ function resize()			{  	  var pageh=window.innerHeight;
 								  
 								  
 								  var menuh = 	$('#mainmenuinner').height();
-								  var menuh2 = menuh+165;
+								  var menuh2 = menuh+300;
 								  $('#mainmenu').css("height",menuh2);
 								  
 								  if (pageh <= menuh2) {
-									  var pageh4=window.innerHeight-165;
+									  var pageh4=window.innerHeight-300;
 								  $('.scrollheight2').css("height",pageh4);
 									  }
 									else {$('.scrollheight2').css("height",menuh);}  

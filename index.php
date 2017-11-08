@@ -13,12 +13,14 @@
     <link href="/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
+
   
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/Leader/assets/css/menu.css" rel="stylesheet" type="text/css" />
   <link href="/Leader/assets/css/comments.css" rel="stylesheet" type="text/css" />
   
+
     <script src="/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
     <script src="/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
     <script src="/Leader/assets/js/Leadersearch.js"></script>
@@ -67,10 +69,10 @@ $(document).ready(function() {
 <body>
 <div class="menustatus"></div>
 
-<div id="mainmenu" align="left">
-   
+<div id="mainmenu" align="left">   
 	
 		<div class="beforeTopHeader">
+
 				<ul class="nav navbar-nav">
 					<li class="text-center">
 						<a href="/Leader/index.php"><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
@@ -98,6 +100,7 @@ $(document).ready(function() {
             </form>
             </div>
 
+
     <div class="scrollcontainer scrollheight2">
         <div class="scrollpanel">
             <div id="mainmenuinner" style="max-width:1200px;width:100%">
@@ -121,6 +124,7 @@ $(document).ready(function() {
 
 <div class="menu pointer" align="center" onclick="openmenu()">
     <a href="#" class="bar" ><i class="fa fa-bars fa-2x" aria-hidden="true" ></i></a>
+
     <img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
 </div>
 
@@ -146,6 +150,7 @@ $(document).ready(function() {
         </form>
 <div >
      
+
    <!-- SearchResultDiv will show search result dynamically start here added by SMITA RXP-->
 <div class="SearchResultDiv" id="SearchResultDiv"></div>
 <!-- SearchResultDiv will show search result dynamically End here added by SMITA RXP-->
@@ -232,6 +237,7 @@ if(isset($_GET['fl'])){
 
     </div>
 </div> -->
+
 
 <script type="application/javascript" src="/assets/js/config.js"></script>
 <script type="text/javascript" src="/Leader/assets/js/functions.js"></script>

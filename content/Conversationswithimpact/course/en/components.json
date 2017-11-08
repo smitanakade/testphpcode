@@ -1,0 +1,1195 @@
+[
+  {
+    "_id": "59816239e1545e6a6582e03b",
+    "_component": "accordion",
+    "_layout": "full",
+    "_courseId": "59816238e1545e6a6582e026",
+    "_parentId": "59924e92e1545e6a6582e237",
+    "__v": 0,
+    "_refId": "597fe5c33a2dea2f1cf9e55b",
+    "displayTitle": "<br>",
+    "_items": [
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "right",
+        "body": "<p>•\tOwn your key messages, especially the difficult ones</p><p><br></p><p>•\tBe open to hear things that you don’t like or want to hear</p><p><br></p><p>•\tBe vulnerable – share something of yourself</p>",
+        "title": "BE COURAGEOUS",
+        "_id": "597fe87c3a2dea2f1cf9e55c",
+        "itemIndex": 0
+      },
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "right",
+        "body": "<p>•Walk in the other person’s shoes</p><p><br></p><p>•Respect different perspectives</p><p><br></p><p>•Avoid making assumptions</p>",
+        "title": "BE EMPATHETIC<br>",
+        "_id": "597fe8b93a2dea2f1cf9e55d",
+        "itemIndex": 1
+      },
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "right",
+        "body": "<p>•\tGive your undivided attention</p><p><br></p><p>•\tAsk more and better questions </p><p><br></p><p>•\tListen to understand not just hear</p>",
+        "itemIndex": 2,
+        "_id": "597fe8d53a2dea2f1cf9e55e",
+        "title": "BE PRESENT<br>"
+      },
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "right",
+        "itemIndex": 3,
+        "_id": "597fe8f33a2dea2f1cf9e55f",
+        "title": "BE AWARE",
+        "body": "<p>•\tKnow what you want to say and how you want to say it</p><p><br></p><p>•\tUnderstand how your mood and reactions impact others</p><p><br></p><p>•\tRecognise and calmly keep conversations on track&nbsp;</p>"
+      },
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "right",
+        "body": "<p>•\tGive the other person time to digest what you are saying</p><p><br></p><p>•\tDon’t be afraid to stay silent, or ask for more time to consider your response</p><p><br></p><p>•\tListen for their perspective and for what you do not already know</p>",
+        "title": "BE SILENT",
+        "_id": "597fe9623a2dea2f1cf9e560",
+        "itemIndex": 4
+      }
+    ],
+    "_shouldShowCheckIcon": false,
+    "_interactionLabel": {
+      "_location": "before widget"
+    },
+    "_isInteractionLabelEnabled": false,
+    "_isQuestionType": false,
+    "_tags": {
+      "_tagsList": [],
+      "_isEnabled": false
+    },
+    "_stamps": {
+      "_isEnabled": false
+    },
+    "_reflection": {
+      "_isEnabled": false
+    },
+    "_progress": {
+      "_isEnabled": true
+    },
+    "_courseAttainment": {
+      "_isEnabled": false
+    },
+    "_courseAssessment": {
+      "_isEnabled": false
+    },
+    "_assignment": {
+      "feedback": "",
+      "_isCorrect": false,
+      "_isMarked": false,
+      "_isEnabled": false
+    },
+    "_badges": {
+      "_badgeIds": []
+    },
+    "_points": {
+      "_isEnabled": false
+    },
+    "_stars": {
+      "_isEnabled": false
+    },
+    "_links": {
+      "_isEnabled": false
+    },
+    "_classes": "",
+    "_displayTitleSettings": {
+      "_textAlign": "center",
+      "_fontSize": ""
+    },
+    "title": "Everyday Conversation Principles",
+    "_type": "component",
+    "_courseOrder": "0-3-0-0"
+  },
+  {
+    "_id": "599251bbe1545e6a6582e23b",
+    "_component": "matching",
+    "_layout": "left",
+    "_courseId": "59816238e1545e6a6582e026",
+    "_parentId": "59816238e1545e6a6582e02b",
+    "_feedback": {
+      "_shouldUseGlobalCorrectFeedback": false,
+      "_incorrect": {
+        "_shouldUseGlobalIncorrectFeedback": false,
+        "final": "<p style=\"text-align: center;\"><b>Thats not quite right.</b></p><p style=\"text-align: center;\"><br></p><p><b>Open</b> questions are designed to require a full, meaningful answer. For example, \"how do you...\" or \"why do you...\".</p><p><br></p><p><b>Closed</b> questions require a yes or a no response. Such as \"when can you...\" or \"have you tried...\". </p><p><br></p><p><b>Probing</b> questions are open in nature, but are specific enough that the listener will respond with the information needed. For example, \"What are your thoughts on the new store layout?\"</p><p><br></p><p><b>Paraphrasing</b> questions repeat back details heard to make sure the questioner has understood what the other person has communicated. For example, \"So you are saying that...\".</p><p><br></p><p><b>Leading</b> questions direct the listener to answer a certain way, or consider a different perspective. For example, \"Would you need this item gift wrapped?\" (asked before a customer has decided to buy the product).</p><p><br></p><p><b>Hypothetical</b> questions pose a scenario that is fictitious, to understand how the listener would act if the scenario were to come to fruition. For example, \"How would you feel if...\".</p><p><br></p><p><b>Reflective</b> questions require the listener to reflect and share their thoughts on past experiences. \"Tell me about your experience with...\".</p>",
+        "notFinal": "<p style=\"text-align: center;\"><b>Thats not quite right, have another go.&nbsp;</b></p><p style=\"text-align: left;\"><br></p><p><b>Open</b> questions are designed to require a full, meaningful answer. For example, \"how do you...\" or \"why do you...\".</p><p><br></p><p><b>Closed</b> questions require a yes or a no response. Such as \"when can you...\" or \"have you tried...\". </p><p><br></p><p><b>Probing</b> questions are open in nature, but are specific enough that the listener will respond with the information needed. For example, \"What are your thoughts on the new store layout?\"</p><p><br></p><p><b>Paraphrasing</b> questions repeat back details heard to make sure the questioner has understood what the other person has communicated. For example, \"So you are saying that...\".</p><p><br></p><p><b>Leading</b> questions direct the listener to answer a certain way, or consider a different perspective. For example, \"Would you need this item gift wrapped?\" (asked before a customer has decided to buy the product).</p><p><br></p><p><b>Hypothetical</b> questions pose a scenario that is fictitious, to understand how the listener would act if the scenario were to come to fruition. For example, \"How would you feel if...\".</p><p><br></p><p><b>Reflective</b> questions require the listener to reflect and share their thoughts on past experiences. \"Tell me about your experience with...\".</p>"
+      },
+      "_partlyCorrect": {
+        "_shouldUseGlobalPartlyCorrectFeedback": false,
+        "final": "<p style=\"text-align: center;\"><b>Thats not quite right.</b></p><p style=\"text-align: center;\"><br></p><p><b>Open</b> questions are designed to require a full, meaningful answer. For example, \"how do you...\" or \"why do you...\".</p><p><br></p><p><b>Closed</b> questions require a yes or a no response. Such as \"when can you...\" or \"have you tried...\". </p><p><br></p><p><b>Probing</b> questions are open in nature, but are specific enough that the listener will respond with the information needed. For example, \"What are your thoughts on the new store layout?\"</p><p><br></p><p><b>Paraphrasing</b> questions repeat back details heard to make sure the questioner has understood what the other person has communicated. For example, \"So you are saying that...\".</p><p><br></p><p><b>Leading</b> questions direct the listener to answer a certain way, or consider a different perspective. For example, \"Would you need this item gift wrapped?\" (asked before a customer has decided to buy the product).</p><p><br></p><p><b>Hypothetical</b> questions pose a scenario that is fictitious, to understand how the listener would act if the scenario were to come to fruition. For example, \"How would you feel if...\".</p><p><br></p><p><b>Reflective</b> questions require the listener to reflect and share their thoughts on past experiences. \"Tell me about your experience with...\".</p>",
+        "notFinal": "<p style=\"text-align: center;\"><b>Thats not quite right, have a new go.<br></b></p><p style=\"text-align: center;\"><b><br></b></p><p><b>Open</b> questions are designed to require a full, meaningful answer. For example, \"how do you...\" or \"why do you...\".</p><p><br></p><p><b>Closed</b> questions require a yes or a no response. Such as \"when can you...\" or \"have you tried...\". </p><p><br></p><p><b>Probing</b> questions are open in nature, but are specific enough that the listener will respond with the information needed. For example, \"What are your thoughts on the new store layout?\"</p><p><br></p><p><b>Paraphrasing</b> questions repeat back details heard to make sure the questioner has understood what the other person has communicated. For example, \"So you are saying that...\".</p><p><br></p><p><b>Leading</b> questions direct the listener to answer a certain way, or consider a different perspective. For example, \"Would you need this item gift wrapped?\" (asked before a customer has decided to buy the product).</p><p><br></p><p><b>Hypothetical</b> questions pose a scenario that is fictitious, to understand how the listener would act if the scenario were to come to fruition. For example, \"How would you feel if...\".</p><p><br></p><p><b>Reflective</b> questions require the listener to reflect and share their thoughts on past experiences. \"Tell me about your experience with...\".</p>"
+      },
+      "_correctGraphic": {
+        "_position": "right"
+      },
+      "_incorrectFinalGraphic": {
+        "_position": "right"
+      },
+      "_incorrectNotFinalGraphic": {
+        "_position": "right"
+      },
+      "_partlyCorrectFinalGraphic": {
+        "_position": "right"
+      },
+      "_partlyCorrectNotFinalGraphic": {
+        "_position": "right"
+      },
+      "correct": "<p style=\"text-align: center;\"><span style=\"font-size: 16px;\"><b>Well done, all these are correct.&nbsp;</b></span><br><br></p><p class=\"\"><b style=\"font-size: 16px;\">Open</b><span style=\"font-size: 16px;\"> questions are designed to require a full, meaningful answer. For example, \"how do you...\" or \"why do you...\".</span></p><p class=\"\"><br><b style=\"font-size: 16px;\">Closed</b><span style=\"font-size: 16px;\"> questions require a yes or a no response. Such as \"when can you...\" or \"have you tried...\".&nbsp;</span></p><p class=\"\"><b style=\"font-size: 16px;\"><br></b></p><p class=\"\"></p><p><b style=\"font-size: 16px;\">Probing</b><span style=\"font-size: 16px;\"> questions are open in nature, but are specific enough that the listener will respond with the information needed. For example, \"What are your thoughts on the new store layout?\"</span></p><p><span style=\"font-size: 16px;\"><br></span></p><b style=\"font-size: 16px;\">Paraphrasing</b><span style=\"font-size: 16px;\"> questions repeat back details heard to make sure the questioner has understood what the other person has communicated. For example, \"So you are saying that...\".</span><p></p><p class=\"\"><b style=\"font-size: 16px;\"><br></b></p><p class=\"\"></p><p><b style=\"font-size: 16px;\">Leading</b><span style=\"font-size: 16px;\">&nbsp;questions direct the listener to answer a certain way, or consider a different perspective. For example, \"Would you need this item gift wrapped?\" (asked before a customer has decided to buy the product).</span></p><p><span style=\"font-size: 16px;\"><br></span></p><b style=\"font-size: 16px;\">Hypothetical</b><span style=\"font-size: 16px;\"> questions pose a scenario that is fictitious, to understand how the listener would act if the scenario were to come to fruition. For example, \"How would you feel if...\".</span><p></p><p class=\"\"><b style=\"font-size: 16px;\"><br></b></p><p class=\"\"></p><p><b style=\"font-size: 16px;\">Reflective</b><span style=\"font-size: 16px;\"> questions require the listener to reflect and share their thoughts&nbsp;on past experiences. \"Tell me&nbsp;</span>about your experience with...\".</p><p></p><p class=\"\"><br></p>"
+    },
+    "_shouldShowDisplayTitleInFeedback": true,
+    "_items": [
+      {
+        "_options": [
+          {
+            "_isCorrect": false,
+            "text": "Probing",
+            "_id": "599253bbe1545e6a6582e243"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "599253bfe1545e6a6582e244",
+            "text": "Paraphrasing"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Closed",
+            "_id": "599253c1e1545e6a6582e245"
+          },
+          {
+            "_isCorrect": true,
+            "_id": "599253c2e1545e6a6582e246",
+            "text": "Open"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Hypothetical",
+            "_id": "599253c2e1545e6a6582e247"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "599253c3e1545e6a6582e248",
+            "text": "Leading"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Reflective",
+            "_id": "599253c4e1545e6a6582e249"
+          }
+        ],
+        "itemIndex": 0,
+        "_id": "599251bee1545e6a6582e23c",
+        "text": "How did you go with that task?"
+      },
+      {
+        "_options": [
+          {
+            "_isCorrect": false,
+            "text": "Open",
+            "_id": "59925432e1545e6a6582e24b"
+          },
+          {
+            "_isCorrect": true,
+            "_id": "59925432e1545e6a6582e24c",
+            "text": "Closed"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Paraphrasing",
+            "_id": "59925433e1545e6a6582e24d"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "59925435e1545e6a6582e24e",
+            "text": "Leading"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Hypothetical",
+            "_id": "59925436e1545e6a6582e24f"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "59925437e1545e6a6582e250",
+            "text": "Probing"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Reflective",
+            "_id": "59925438e1545e6a6582e251"
+          }
+        ],
+        "text": "Have you had a lunch break yet?",
+        "_id": "599251bfe1545e6a6582e23d",
+        "itemIndex": 1
+      },
+      {
+        "_options": [
+          {
+            "_isCorrect": false,
+            "text": "Open",
+            "_id": "5992548fe1545e6a6582e254"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "5992548fe1545e6a6582e255",
+            "text": "Closed"
+          },
+          {
+            "_isCorrect": true,
+            "text": "Probing",
+            "_id": "59925490e1545e6a6582e256"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "59925490e1545e6a6582e257",
+            "text": "Paraphrasing"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Leading",
+            "_id": "59925491e1545e6a6582e258"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "59925492e1545e6a6582e259",
+            "text": "Hypothetical"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Reflective",
+            "_id": "59925493e1545e6a6582e25a"
+          }
+        ],
+        "itemIndex": 2,
+        "_id": "599251c1e1545e6a6582e23e",
+        "text": "Tell me more about what happened with that customer?"
+      },
+      {
+        "_options": [
+          {
+            "_isCorrect": false,
+            "text": "Open",
+            "_id": "599254cee1545e6a6582e25b"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "599254cfe1545e6a6582e25c",
+            "text": "Closed"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Probing",
+            "_id": "599254cfe1545e6a6582e25d"
+          },
+          {
+            "_isCorrect": true,
+            "_id": "599254d0e1545e6a6582e25e",
+            "text": "Paraphrasing"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Leading",
+            "_id": "599254d1e1545e6a6582e25f"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "599254d1e1545e6a6582e260",
+            "text": "Reflective"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Hypothetical",
+            "_id": "599254d2e1545e6a6582e261"
+          }
+        ],
+        "text": "&nbsp;You’re saying you may need help to finish, is that right?",
+        "_id": "599251c2e1545e6a6582e23f",
+        "itemIndex": 3
+      }
+    ],
+    "_isRandom": true,
+    "_shouldDisplayAttempts": true,
+    "_attempts": 3,
+    "_interactionLabel": {
+      "_location": "before widget"
+    },
+    "_isInteractionLabelEnabled": false,
+    "_isQuestionType": true,
+    "__v": 0,
+    "_refId": "599251bbe1545e6a6582e23b",
+    "_tags": {
+      "_tagsList": [],
+      "_isEnabled": false
+    },
+    "_stamps": {
+      "_isEnabled": false
+    },
+    "_reflection": {
+      "_isEnabled": false
+    },
+    "_progress": {
+      "_isEnabled": true
+    },
+    "_courseAttainment": {
+      "_isEnabled": false
+    },
+    "_courseAssessment": {
+      "_isEnabled": false
+    },
+    "_assignment": {
+      "feedback": "",
+      "_isCorrect": false,
+      "_isMarked": false,
+      "_isEnabled": false
+    },
+    "_badges": {
+      "_badgeIds": []
+    },
+    "_points": {
+      "_isEnabled": false
+    },
+    "_stars": {
+      "_isEnabled": false
+    },
+    "_links": {
+      "_isEnabled": false
+    },
+    "_classes": "",
+    "title": "QUESTION TYPES",
+    "_type": "component",
+    "_courseOrder": "0-5-0-0"
+  },
+  {
+    "_id": "59925768e1545e6a6582e27c",
+    "_component": "matching",
+    "_layout": "right",
+    "_courseId": "59816238e1545e6a6582e026",
+    "_parentId": "59816238e1545e6a6582e02b",
+    "__v": 0,
+    "_feedback": {
+      "_shouldUseGlobalCorrectFeedback": false,
+      "_incorrect": {
+        "_shouldUseGlobalIncorrectFeedback": false,
+        "notFinal": "<p style=\"text-align: center;\"><b>Thats not quite right, have another go.</b></p><p><br></p><p><b>Open</b> questions are designed to require a full, meaningful answer. For example, \"how do you...\" or \"why do you...\".</p><p><br></p><p><b>Closed</b> questions require a yes or a no response. Such as \"when can you...\" or \"have you tried...\". </p><p><br></p><p><b>Probing</b> questions are open in nature, but are specific enough that the listener will respond with the information needed. For example, \"What are your thoughts on the new store layout?\"</p><p><br></p><p><b>Paraphrasing</b> questions repeat back details heard to make sure the questioner has understood what the other person has communicated. For example, \"So you are saying that...\".</p><p><br></p><p><b>Leading</b> questions direct the listener to answer a certain way, or consider a different perspective. For example, \"Would you need this item gift wrapped?\" (asked before a customer has decided to buy the product).</p><p><br></p><p><b>Hypothetical</b> questions pose a scenario that is fictitious, to understand how the listener would act if the scenario were to come to fruition. For example, \"How would you feel if...\".</p><p><br></p><p><b>Reflective</b> questions require the listener to reflect and share their thoughts on past experiences. \"Tell me about your experience with...\".</p>",
+        "final": "<p style=\"text-align: center;\"><b>Thats not quite right.</b></p><p style=\"text-align: center;\"><b><br></b></p><p><b>Open</b> questions are designed to require a full, meaningful answer. For example, \"how do you...\" or \"why do you...\".</p><p><br></p><p><b>Closed</b> questions require a yes or a no response. Such as \"when can you...\" or \"have you tried...\". </p><p><br></p><p><b>Probing</b> questions are open in nature, but are specific enough that the listener will respond with the information needed. For example, \"What are your thoughts on the new store layout?\"</p><p><br></p><p><b>Paraphrasing</b> questions repeat back details heard to make sure the questioner has understood what the other person has communicated. For example, \"So you are saying that...\".</p><p><br></p><p><b>Leading</b> questions direct the listener to answer a certain way, or consider a different perspective. For example, \"Would you need this item gift wrapped?\" (asked before a customer has decided to buy the product).</p><p><br></p><p><b>Hypothetical</b> questions pose a scenario that is fictitious, to understand how the listener would act if the scenario were to come to fruition. For example, \"How would you feel if...\".</p><p><br></p><p><b>Reflective</b> questions require the listener to reflect and share their thoughts on past experiences. \"Tell me about your experience with...\".</p>"
+      },
+      "_partlyCorrect": {
+        "_shouldUseGlobalPartlyCorrectFeedback": false,
+        "notFinal": "<p style=\"text-align: center;\"><b>Thats not quite right, have another go.&nbsp;</b></p><p style=\"text-align: center;\"><br></p><p><b>Open</b> questions are designed to require a full, meaningful answer. For example, \"how do you...\" or \"why do you...\".</p><p><br></p><p><b>Closed</b> questions require a yes or a no response. Such as \"when can you...\" or \"have you tried...\". </p><p><br></p><p><b>Probing</b> questions are open in nature, but are specific enough that the listener will respond with the information needed. For example, \"What are your thoughts on the new store layout?\"</p><p><br></p><p><b>Paraphrasing</b> questions repeat back details heard to make sure the questioner has understood what the other person has communicated. For example, \"So you are saying that...\".</p><p><br></p><p><b>Leading</b> questions direct the listener to answer a certain way, or consider a different perspective. For example, \"Would you need this item gift wrapped?\" (asked before a customer has decided to buy the product).</p><p><br></p><p><b>Hypothetical</b> questions pose a scenario that is fictitious, to understand how the listener would act if the scenario were to come to fruition. For example, \"How would you feel if...\".</p><p><br></p><p><b>Reflective</b> questions require the listener to reflect and share their thoughts on past experiences. \"Tell me about your experience with...\".</p>",
+        "final": "<p style=\"text-align: center;\"><b>Thats not quite right.</b></p><p style=\"text-align: center;\"><br></p><p><b>Open</b> questions are designed to require a full, meaningful answer. For example, \"how do you...\" or \"why do you...\".</p><p><br></p><p><b>Closed</b> questions require a yes or a no response. Such as \"when can you...\" or \"have you tried...\". </p><p><br></p><p><b>Probing</b> questions are open in nature, but are specific enough that the listener will respond with the information needed. For example, \"What are your thoughts on the new store layout?\"</p><p><br></p><p><b>Paraphrasing</b> questions repeat back details heard to make sure the questioner has understood what the other person has communicated. For example, \"So you are saying that...\".</p><p><br></p><p><b>Leading</b> questions direct the listener to answer a certain way, or consider a different perspective. For example, \"Would you need this item gift wrapped?\" (asked before a customer has decided to buy the product).</p><p><br></p><p><b>Hypothetical</b> questions pose a scenario that is fictitious, to understand how the listener would act if the scenario were to come to fruition. For example, \"How would you feel if...\".</p><p><br></p><p><b>Reflective</b> questions require the listener to reflect and share their thoughts on past experiences. \"Tell me about your experience with...\".</p>"
+      },
+      "_correctGraphic": {
+        "_position": "right"
+      },
+      "_incorrectFinalGraphic": {
+        "_position": "right"
+      },
+      "_incorrectNotFinalGraphic": {
+        "_position": "right"
+      },
+      "_partlyCorrectFinalGraphic": {
+        "_position": "right"
+      },
+      "_partlyCorrectNotFinalGraphic": {
+        "_position": "right"
+      },
+      "correct": "<p style=\"text-align: center;\"><b>Well done, all these are correct. </b></p><p><br></p><p><b>Open</b> questions are designed to require a full, meaningful answer. For example, \"how do you...\" or \"why do you...\".</p><p><br></p><p><b>Closed</b> questions require a yes or a no response. Such as \"when can you...\" or \"have you tried...\". </p><p><br></p><p><b>Probing</b> questions are open in nature, but are specific enough that the listener will respond with the information needed. For example, \"What are your thoughts on the new store layout?\"</p><p><br></p><p><b>Paraphrasing</b> questions repeat back details heard to make sure the questioner has understood what the other person has communicated. For example, \"So you are saying that...\".</p><p><br></p><p><b>Leading</b> questions direct the listener to answer a certain way, or consider a different perspective. For example, \"Would you need this item gift wrapped?\" (asked before a customer has decided to buy the product).</p><p><br></p><p><b>Hypothetical</b> questions pose a scenario that is fictitious, to understand how the listener would act if the scenario were to come to fruition. For example, \"How would you feel if...\".</p><p><br></p><p><b>Reflective</b> questions require the listener to reflect and share their thoughts on past experiences. \"Tell me about your experience with...\".</p>"
+    },
+    "_shouldShowDisplayTitleInFeedback": true,
+    "_items": [
+      {
+        "_options": [
+          {
+            "_isCorrect": false,
+            "text": "Open",
+            "_id": "59925516e1545e6a6582e262"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "59925517e1545e6a6582e263",
+            "text": "Closed"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Probing",
+            "_id": "59925519e1545e6a6582e264"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "59925519e1545e6a6582e265",
+            "text": "Paraphrasing"
+          },
+          {
+            "_isCorrect": true,
+            "text": "Hypothetical",
+            "_id": "5992551ae1545e6a6582e266"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "5992551be1545e6a6582e267",
+            "text": "Leading"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Reflective",
+            "_id": "5992551ce1545e6a6582e268"
+          }
+        ],
+        "itemIndex": 0,
+        "_id": "599251c3e1545e6a6582e240",
+        "text": "If we get busy would you be able to work an extra shift?"
+      },
+      {
+        "_options": [
+          {
+            "_isCorrect": false,
+            "text": "Open",
+            "_id": "5992556be1545e6a6582e269"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "5992556be1545e6a6582e26a",
+            "text": "Closed"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Paraphrasing",
+            "_id": "5992556ce1545e6a6582e26b"
+          },
+          {
+            "_isCorrect": true,
+            "_id": "5992556ce1545e6a6582e26c",
+            "text": "Leading"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Reflective",
+            "_id": "5992556de1545e6a6582e26d"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "5992556ee1545e6a6582e26e",
+            "text": "Probing"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Hypothetical",
+            "_id": "5992556fe1545e6a6582e26f"
+          }
+        ],
+        "_id": "599251cbe1545e6a6582e241",
+        "itemIndex": 1,
+        "text": "Was the way you spoke to the customer was correct?"
+      },
+      {
+        "_options": [
+          {
+            "_isCorrect": false,
+            "_id": "599255ade1545e6a6582e270",
+            "text": "Open"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Closed",
+            "_id": "599255aee1545e6a6582e271"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "599255aee1545e6a6582e272",
+            "text": "Probing"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Paraphrasing",
+            "_id": "599255afe1545e6a6582e273"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "599255b0e1545e6a6582e274",
+            "text": "Leading"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Hypothetical",
+            "_id": "599255b0e1545e6a6582e275"
+          },
+          {
+            "_isCorrect": true,
+            "_id": "599255b1e1545e6a6582e276",
+            "text": "Reflective"
+          }
+        ],
+        "text": "What are you learning from your current job challenges?",
+        "itemIndex": 2,
+        "_id": "599251cce1545e6a6582e242"
+      },
+      {
+        "_options": [
+          {
+            "_isCorrect": true,
+            "_id": "599257dde1545e6a6582e27f",
+            "text": "Open"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Closed",
+            "_id": "599257dde1545e6a6582e280"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "599257dee1545e6a6582e281",
+            "text": "Probing"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Reflective",
+            "_id": "599257dfe1545e6a6582e282"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "599257e0e1545e6a6582e283",
+            "text": "Paraphrasing"
+          },
+          {
+            "_isCorrect": false,
+            "text": "Leading",
+            "_id": "599257e0e1545e6a6582e284"
+          },
+          {
+            "_isCorrect": false,
+            "_id": "599257e1e1545e6a6582e285",
+            "text": "Hypothetical"
+          }
+        ],
+        "text": "How did you find your first day?&nbsp;",
+        "_id": "599257aee1545e6a6582e27e",
+        "itemIndex": 3
+      }
+    ],
+    "_isRandom": true,
+    "_shouldDisplayAttempts": true,
+    "_attempts": 3,
+    "_interactionLabel": {
+      "_location": "before widget"
+    },
+    "_isInteractionLabelEnabled": false,
+    "_isQuestionType": true,
+    "_refId": "59925768e1545e6a6582e27c",
+    "_tags": {
+      "_tagsList": [],
+      "_isEnabled": false
+    },
+    "_stamps": {
+      "_isEnabled": false
+    },
+    "_reflection": {
+      "_isEnabled": false
+    },
+    "_progress": {
+      "_isEnabled": true
+    },
+    "_courseAttainment": {
+      "_isEnabled": false
+    },
+    "_courseAssessment": {
+      "_isEnabled": false
+    },
+    "_assignment": {
+      "feedback": "",
+      "_isCorrect": false,
+      "_isMarked": false,
+      "_isEnabled": false
+    },
+    "_badges": {
+      "_badgeIds": []
+    },
+    "_points": {
+      "_isEnabled": false
+    },
+    "_stars": {
+      "_isEnabled": false
+    },
+    "_links": {
+      "_isEnabled": false
+    },
+    "_classes": "",
+    "title": "QUESTION TYPES",
+    "_type": "component",
+    "_courseOrder": "0-5-0-1"
+  },
+  {
+    "_id": "59925fcde1545e6a6582e28b",
+    "_component": "graphic",
+    "_layout": "full",
+    "_courseId": "59816238e1545e6a6582e026",
+    "_parentId": "59816239e1545e6a6582e03f",
+    "_graphic": {
+      "small": {
+        "_size": "small",
+        "_type": "image",
+        "_extension": "png",
+        "_id": "599f99b5052917a2552bf6c7"
+      },
+      "large": {
+        "_id": "599f99b5052917a2552bf6c7",
+        "_extension": "png",
+        "_type": "image",
+        "_size": "large"
+      },
+      "_isExternalLink": false
+    },
+    "_graphicTextRightPadding": 0,
+    "_graphicTextLeftPadding": 0,
+    "_graphicTextBottomPadding": 0,
+    "_graphicTextTopPadding": 0,
+    "_contentWidth": 100,
+    "layout": "top",
+    "_shouldEnableGraphicText": false,
+    "_interactionLabel": {
+      "_location": "before widget"
+    },
+    "_isInteractionLabelEnabled": false,
+    "_isQuestionType": false,
+    "__v": 0,
+    "_refId": "59925fcde1545e6a6582e28b",
+    "_tags": {
+      "_tagsList": [],
+      "_isEnabled": false
+    },
+    "_stamps": {
+      "_isEnabled": false
+    },
+    "_reflection": {
+      "_isEnabled": false
+    },
+    "_progress": {
+      "_isEnabled": true
+    },
+    "_courseAttainment": {
+      "_isEnabled": false
+    },
+    "_courseAssessment": {
+      "_isEnabled": false
+    },
+    "_assignment": {
+      "feedback": "",
+      "_isCorrect": false,
+      "_isMarked": false,
+      "_isEnabled": false
+    },
+    "_badges": {
+      "_badgeIds": []
+    },
+    "_points": {
+      "_isEnabled": false
+    },
+    "_stars": {
+      "_isEnabled": false
+    },
+    "_links": {
+      "_isEnabled": false
+    },
+    "_classes": "",
+    "title": "Graphic Title",
+    "_type": "component",
+    "_courseOrder": "0-6-0-0"
+  },
+  {
+    "_id": "59926cdfe1545e6a6582e294",
+    "_component": "accordion",
+    "_layout": "full",
+    "_courseId": "59816238e1545e6a6582e026",
+    "_parentId": "59926cdbe1545e6a6582e293",
+    "_items": [
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "bottom",
+        "title": "IDENTIFY THE KEY&nbsp;'STAND OUT' WORDS",
+        "_id": "59926cf7e1545e6a6582e295",
+        "itemIndex": 0,
+        "body": "<p>“I’m having <i>trouble</i> with a person in my team. He can’t seem to be <i>bothered.\"</i></p>"
+      },
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "bottom",
+        "body": "<p>“What kind of <i>trouble</i>?”</p>",
+        "title": "ASK ABOUT ONE&nbsp;OF THE KEY WORDS ",
+        "itemIndex": 1,
+        "_id": "59926cf7e1545e6a6582e296"
+      },
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "right",
+        "body": "<p>“He’s not as <i>productive</i> as he used to be.\"</p>",
+        "_id": "59926cf8e1545e6a6582e297",
+        "itemIndex": 2,
+        "title": "LISTEN FOR THE ANSWER"
+      },
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "right",
+        "body": "<p>“How has his <i>productivity</i> dropped?”</p>",
+        "title": "NOTICE THE NEW KEY WORD AND QUESTION IT",
+        "itemIndex": 3,
+        "_id": "59926cf9e1545e6a6582e298"
+      },
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "right",
+        "body": "<p>“He gets <i>less</i> work done in a week and the <i>quality</i> has slipped too.\"</p>",
+        "_id": "59926cf9e1545e6a6582e299",
+        "itemIndex": 4,
+        "title": " LISTEN FOR THE ANSWER"
+      },
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "right",
+        "title": "NOTICE THE NEW&nbsp;KEY WORD AGAIN",
+        "itemIndex": 5,
+        "_id": "59926cfae1545e6a6582e29a",
+        "body": "<p>&nbsp;“Why do you think he is getting less work done?” or “Tell me about the slip in quality…”</p>"
+      },
+      {
+        "_mediaType": "image",
+        "_video": {
+          "_shouldAutoPlay": false
+        },
+        "_itemGraphicLayout": "right",
+        "body": "<p style=\"text-align: center;\">Listen for the key words and ask about them until you reach a good understanding of the situation.</p>",
+        "_id": "59926cfbe1545e6a6582e29b",
+        "itemIndex": 6,
+        "title": "LISTEN FOR THE KEY WORDS<br>"
+      }
+    ],
+    "_shouldShowCheckIcon": false,
+    "_interactionLabel": {
+      "_location": "before widget"
+    },
+    "_isInteractionLabelEnabled": false,
+    "_isQuestionType": false,
+    "__v": 0,
+    "_refId": "59926cdfe1545e6a6582e294",
+    "displayTitle": "",
+    "body": "",
+    "_tags": {
+      "_tagsList": [],
+      "_isEnabled": false
+    },
+    "_stamps": {
+      "_isEnabled": false
+    },
+    "_reflection": {
+      "_isEnabled": false
+    },
+    "_progress": {
+      "_isEnabled": true
+    },
+    "_courseAttainment": {
+      "_isEnabled": false
+    },
+    "_courseAssessment": {
+      "_isEnabled": false
+    },
+    "_assignment": {
+      "feedback": "",
+      "_isCorrect": false,
+      "_isMarked": false,
+      "_isEnabled": false
+    },
+    "_badges": {
+      "_badgeIds": []
+    },
+    "_points": {
+      "_isEnabled": false
+    },
+    "_stars": {
+      "_isEnabled": false
+    },
+    "_links": {
+      "_isEnabled": false
+    },
+    "_classes": "",
+    "_displayTitleSettings": {
+      "_textAlign": "center",
+      "_fontSize": ""
+    },
+    "title": "Accordion Title",
+    "_type": "component",
+    "_courseOrder": "0-8-1-0"
+  },
+  {
+    "_id": "599f9265052917a2552bf6bc",
+    "_component": "links",
+    "_layout": "full",
+    "_courseId": "59816238e1545e6a6582e026",
+    "_parentId": "599f9265052917a2552bf6bb",
+    "__v": 0,
+    "_items": [
+      {
+        "_isImageLink": true,
+        "_graphic": {
+          "src": {
+            "_id": "59965226052917a2552bf5cd",
+            "_extension": "png",
+            "_type": "image",
+            "_size": "small"
+          }
+        },
+        "_linkTarget": "new window",
+        "_shouldCloseWindow": false,
+        "_shouldCompleteComponentsInPage": false,
+        "_components": [],
+        "_shouldUnlockOnComponent": false,
+        "_isInternalLink": false,
+        "_isButton": false,
+        "_linkPosition": "top",
+        "_linkAlignment": "left",
+        "_isComplete": false,
+        "itemIndex": 0,
+        "_id": "59952f33052917a2552bf556",
+        "link": "https://www.ted.com/talks/drew_dudley_everyday_leadership"
+      }
+    ],
+    "_setCompletionOn": "inview",
+    "_interactionLabel": {
+      "_location": "before widget"
+    },
+    "_isInteractionLabelEnabled": false,
+    "_isQuestionType": false,
+    "_refId": "599f9265052917a2552bf6bc",
+    "_tags": {
+      "_tagsList": [],
+      "_isEnabled": false
+    },
+    "_stamps": {
+      "_isEnabled": false
+    },
+    "_reflection": {
+      "_isEnabled": false
+    },
+    "_progress": {
+      "_isEnabled": true
+    },
+    "_courseAttainment": {
+      "_isEnabled": false
+    },
+    "_courseAssessment": {
+      "_isEnabled": false
+    },
+    "_assignment": {
+      "feedback": "",
+      "_isCorrect": false,
+      "_isMarked": false,
+      "_isEnabled": false
+    },
+    "_badges": {
+      "_badgeIds": []
+    },
+    "_points": {
+      "_isEnabled": false
+    },
+    "_stars": {
+      "_isEnabled": false
+    },
+    "_links": {
+      "_isEnabled": false
+    },
+    "_classes": "",
+    "title": "Link Title",
+    "_type": "component",
+    "_courseOrder": "0-11-0-0"
+  },
+  {
+    "_id": "599f92a3052917a2552bf6c0",
+    "_component": "links",
+    "_layout": "full",
+    "_courseId": "59816238e1545e6a6582e026",
+    "_parentId": "599f92a3052917a2552bf6bf",
+    "__v": 0,
+    "displayTitle": "",
+    "body": "<p><br></p><p><br></p>",
+    "_items": [
+      {
+        "_isImageLink": true,
+        "_graphic": {
+          "src": {
+            "_id": "59953a17052917a2552bf559",
+            "_extension": "png",
+            "_type": "image",
+            "_size": "small"
+          }
+        },
+        "_linkTarget": "new window",
+        "_shouldCloseWindow": false,
+        "_shouldCompleteComponentsInPage": false,
+        "_components": [],
+        "_shouldUnlockOnComponent": false,
+        "_isInternalLink": false,
+        "_isButton": true,
+        "_linkPosition": "top",
+        "_linkAlignment": "center",
+        "_isComplete": false,
+        "itemTitle": "Listen",
+        "_id": "59928915e1545e6a6582e2b5",
+        "itemIndex": 0,
+        "body": "",
+        "link": "https://www.ccl.org/multimedia/podcast/the-big-6-an-active-listening-skill-set/"
+      }
+    ],
+    "_setCompletionOn": "inview",
+    "_interactionLabel": {
+      "_location": "before widget"
+    },
+    "_isInteractionLabelEnabled": false,
+    "_isQuestionType": false,
+    "_refId": "599f92a3052917a2552bf6c0",
+    "_tags": {
+      "_tagsList": [],
+      "_isEnabled": false
+    },
+    "_stamps": {
+      "_isEnabled": false
+    },
+    "_reflection": {
+      "_isEnabled": false
+    },
+    "_progress": {
+      "_isEnabled": true
+    },
+    "_courseAttainment": {
+      "_isEnabled": false
+    },
+    "_courseAssessment": {
+      "_isEnabled": false
+    },
+    "_assignment": {
+      "feedback": "",
+      "_isCorrect": false,
+      "_isMarked": false,
+      "_isEnabled": false
+    },
+    "_badges": {
+      "_badgeIds": []
+    },
+    "_points": {
+      "_isEnabled": false
+    },
+    "_stars": {
+      "_isEnabled": false
+    },
+    "_links": {
+      "_isEnabled": false
+    },
+    "_classes": "",
+    "title": "To learn more (leadership shadow)",
+    "_type": "component",
+    "_courseOrder": "0-13-0-0"
+  },
+  {
+    "_id": "59d704265ec7f6ad7d8484f9",
+    "_component": "links",
+    "_layout": "full",
+    "_courseId": "59816238e1545e6a6582e026",
+    "_parentId": "59d704265ec7f6ad7d8484f8",
+    "__v": 0,
+    "displayTitle": "",
+    "body": "<p><br></p><p><br></p>",
+    "_items": [
+      {
+        "_isImageLink": true,
+        "_graphic": {
+          "src": {
+            "_size": "small",
+            "_type": "image",
+            "_extension": "png",
+            "_id": "599654bf052917a2552bf5ce"
+          }
+        },
+        "_linkTarget": "new window",
+        "_shouldCloseWindow": false,
+        "_shouldCompleteComponentsInPage": false,
+        "_components": [],
+        "_shouldUnlockOnComponent": false,
+        "_isInternalLink": false,
+        "_isButton": true,
+        "_linkPosition": "top",
+        "_linkAlignment": "center",
+        "_isComplete": false,
+        "itemTitle": "Listen",
+        "_id": "59928915e1545e6a6582e2b5",
+        "itemIndex": 0,
+        "body": "",
+        "link": "https://trainingmag.com/trgmag-article/hold-high-impact-conversations"
+      }
+    ],
+    "_setCompletionOn": "inview",
+    "_interactionLabel": {
+      "_location": "before widget"
+    },
+    "_isInteractionLabelEnabled": false,
+    "_isQuestionType": false,
+    "_refId": "59d704265ec7f6ad7d8484f9",
+    "_tags": {
+      "_tagsList": [],
+      "_isEnabled": false
+    },
+    "_stamps": {
+      "_isEnabled": false
+    },
+    "_reflection": {
+      "_isEnabled": false
+    },
+    "_progress": {
+      "_isEnabled": true
+    },
+    "_courseAttainment": {
+      "_isEnabled": false
+    },
+    "_courseAssessment": {
+      "_isEnabled": false
+    },
+    "_assignment": {
+      "feedback": "",
+      "_isCorrect": false,
+      "_isMarked": false,
+      "_isEnabled": false
+    },
+    "_badges": {
+      "_badgeIds": []
+    },
+    "_points": {
+      "_isEnabled": false
+    },
+    "_stars": {
+      "_isEnabled": false
+    },
+    "_links": {
+      "_isEnabled": false
+    },
+    "_classes": "",
+    "title": "To learn more (leadership shadow)",
+    "_type": "component",
+    "_courseOrder": "0-15-0-0"
+  },
+  {
+    "_id": "59d6fd4c5ec7f6ad7d8484f3",
+    "_component": "links",
+    "_layout": "full",
+    "_courseId": "59816238e1545e6a6582e026",
+    "_parentId": "59d6fd4c5ec7f6ad7d8484f2",
+    "__v": 0,
+    "displayTitle": "",
+    "body": "<p><br></p><p><br></p>",
+    "_items": [
+      {
+        "_isImageLink": true,
+        "_graphic": {
+          "src": {
+            "_size": "small",
+            "_type": "image",
+            "_extension": "png",
+            "_id": "59c99078aeab875c6c490ed3"
+          }
+        },
+        "_linkTarget": "new window",
+        "_shouldCloseWindow": false,
+        "_shouldCompleteComponentsInPage": false,
+        "_components": [],
+        "_shouldUnlockOnComponent": false,
+        "_isInternalLink": true,
+        "_isButton": true,
+        "_linkPosition": "top",
+        "_linkAlignment": "center",
+        "_isComplete": false,
+        "link": "59d6fe705ec7f6ad7d8484f6",
+        "body": "",
+        "itemIndex": 0,
+        "_id": "59928915e1545e6a6582e2b5",
+        "itemTitle": "Listen",
+        "_type": "resources"
+      }
+    ],
+    "_setCompletionOn": "inview",
+    "_interactionLabel": {
+      "_location": "before widget"
+    },
+    "_isInteractionLabelEnabled": false,
+    "_isQuestionType": false,
+    "_refId": "59d6fd4c5ec7f6ad7d8484f3",
+    "_tags": {
+      "_tagsList": [],
+      "_isEnabled": false
+    },
+    "_stamps": {
+      "_isEnabled": false
+    },
+    "_reflection": {
+      "_isEnabled": false
+    },
+    "_progress": {
+      "_isEnabled": true
+    },
+    "_courseAttainment": {
+      "_isEnabled": false
+    },
+    "_courseAssessment": {
+      "_isEnabled": false
+    },
+    "_assignment": {
+      "feedback": "",
+      "_isCorrect": false,
+      "_isMarked": false,
+      "_isEnabled": false
+    },
+    "_badges": {
+      "_badgeIds": []
+    },
+    "_points": {
+      "_isEnabled": false
+    },
+    "_stars": {
+      "_isEnabled": false
+    },
+    "_links": {
+      "_isEnabled": false
+    },
+    "_classes": "",
+    "title": "To learn more (leadership shadow)",
+    "_type": "component",
+    "_courseOrder": "0-17-0-0"
+  }
+]
