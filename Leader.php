@@ -20,6 +20,8 @@
     <link href="/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
+    <script type="application/javascript" src="/Leader/assets/js/contentPage.js"></script>
+
   
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -33,12 +35,16 @@
  	<script type="application/javascript" src="/Leader/assets/js/menu.js"></script>
  <script>
 $(document).ready(function() {
-    $('#filter').change(function() {
-    var filter = $('#filter').find(":selected").text();
-    //var queryString = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
-    //var passQuery = queryString[0];
-    $('#indexSearch').attr('action', '/Leader/index.php?fl='+filter).submit(); 
 
+    $('#filter').change(function(e) {
+    var filter = $('#filter').find(":selected").text();
+      var uriParameters = location.search.substr(1).split('&');
+      
+         for (var i = 0; i < uriParameters.length; i++) {
+           var parameter = uriParameters[i].split('=');
+           $('#leadSearch').attr('action', '/Leader/Leader.php?'+uriParameters[0]+'&fl='+filter).submit(); 
+         }
+  
 });
 });
  </script>
@@ -64,7 +70,9 @@ $(document).ready(function() {
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
     <?php //include_once("analyticstracking.php") ?>
-    <?php 
+   
+	<?php 
+
 		$jsonMenu = file_get_contents('http://52.65.147.55/webapi/content.php');
 	?>
 
@@ -72,12 +80,14 @@ $(document).ready(function() {
 <body>
 <div class="menustatus"></div>
 
+
+<div class="menustatus"></div>
+
 <div id="mainmenu" align="left">
-    
-	<div align="center">
+   
 	
 		<div class="beforeTopHeader">
-			<div class="topHeader">
+
 				<ul class="nav navbar-nav">
 					<li class="text-center">
 						<a href="/Leader/index.php"><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
@@ -89,24 +99,24 @@ $(document).ready(function() {
 						<a href="#" onclick="logout()"><i class="fa fa-lg fa-sign-out"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">SIGN OUT</span></a>
 					</li>
 				</ul>
-			</div>
+
+			
 		</div>
-
-        <form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="<?php  echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
-        <div style="max-width:80%;">
-            <div class="input-group add-on">
-          <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
-          <div class="input-group-btn">
-            <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-          </div>
+        <div class="sch">
+        <form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="/Leader/searchResult.php" >
+            <div style="max-width:80%;">
+                <div class="input-group add-on">
+              <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+              <div class="input-group-btn">
+                <button class="btn btn-default" id="SerchButton" type="submit" ><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+            </div>
         </div>
-    </div>
-      
-        <br/>
-		<div class="spacer20"></div>
-		</form>
+          
+            </form>
+            </div>
 
-    </div>
+
     <div class="scrollcontainer scrollheight2">
         <div class="scrollpanel">
             <div id="mainmenuinner" style="max-width:1200px;width:100%">
@@ -140,34 +150,24 @@ $(document).ready(function() {
 <div align="center">
 
     <div style="max-width:100%;min-height:70px;border-bottom:1px solid #000;"><img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" ></div>
-    <div class="beforeTopHeader">
-    <div class="topHeader">
-        <ul class="nav navbar-nav">
-        <li class="text-center">
-          <a href="/Leader/index.php" ><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
-        </li>
-        <li class="text-center">
-          <a href="mailto:myeracademy@myer.com.au" ><i class="fa fa-lg fa-envelope-o"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">GET IN TOUCH</span></a>
-        </li>
-        <li class="text-center">
-          <a href="#" onclick="logout()"><i class="fa fa-lg fa-sign-out"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">SIGN OUT</span></a>
-        </li>
-      </ul>
-      </div>
-        
+    <div class="beforeTopHeader">  
        
       <span   class="headLine">MYER LEADERS PORTAL</span>
-      <h2  class="subtitle"> REALISE YOUR LEADERSHIP POTENTIAL</h2>
+      <h2  class="subtitle">OWN YOUR LEADERSHIP POTENTIAL</h2>
 </div>
-<form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="<?php  echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
+<form class="navbar-form" id="leadSearch" method="POST" name="leadSearch" action="<?php  echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  >
+<!--This Page body search option code -->
 <div style="max-width:80%;">
 <div class="input-group add-on">
-<input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+<input class="form-control" placeholder="Search" name="homeSearch" id="homeSearch" type="text">
 <div class="input-group-btn">
-<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+  <button class="btn btn-default" id="homeSearchbtn" type="button"><i class="glyphicon glyphicon-search"></i></button>
 </div>
 </div>
 </div>
+    <!-- Body search option ending here -->
+
+
 <br/>
     <div class="spacer20"></div>
 <!-- HeroImage START genrating Hero image baised on mensu selection-->
@@ -195,14 +195,17 @@ if ($result_content = mysqli_query($link, $sql_content)) {
 </div>
         <!-- // Hero -->
         <div class="spacer20"></div>
-    <span class="headLine2">What am I doing today ?</span>
-    <div class="spacer20"></div>
+        <span class="headLine2">What am I doing today ?</span>
+        <div class="spacer20"></div>
+        <p class="subtitle"style="max-width: 700px;">FILTER BY THE TYPE OF LEARNING OR CLICK ONE OF THE FOUR LEADERSHIP FOCUS AREAS TO DISCOVER MORE</p>
+        <div class="spacer20"></div>
+
     
     <div>
     
                 <select id="filter" class="form-control">
-                <option value=''>FILTER BY</option>
-                        <option value='watch' >WATCH</option>
+                        <option value=''>FILTER BY</option>
+        <option value='watch' >WATCH</option>
                         <option value='LISTEN'>LISTEN</option>
                         <option value='READ'>READ</option>
                         <option value='READ'>DO</option>

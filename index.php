@@ -13,12 +13,13 @@
     <link href="/Leader/assets/css/styles_resp.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/assets/css/scroll.css" rel="stylesheet" type="text/css" media="all"/>
-    <!-- <link href="/assets/css/jquery.swipeshow.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/slideshow-theme.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/assets/css/forms_light.css" rel="stylesheet" type="text/css" media="all" charset="utf-8"/> -->
+
+  
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/Leader/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/Leader/assets/css/menu.css" rel="stylesheet" type="text/css" />
+  <link href="/Leader/assets/css/comments.css" rel="stylesheet" type="text/css" />
+  
 
     <script src="/Leader/assets/js/jquery-1.10.2.js" type="text/javascript" ></script>
     <script src="/Leader/assets/js/jquery-2.1.3.min.js" type="text/javascript" ></script>
@@ -29,8 +30,7 @@
 $(document).ready(function() {
     $('#filter').change(function() {
     var filter = $('#filter').find(":selected").text();
-    //var queryString = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
-    //var passQuery = queryString[0];
+
     $('#indexSearch').attr('action', '/Leader/index.php?fl='+filter).submit(); 
 
 });
@@ -69,12 +69,10 @@ $(document).ready(function() {
 <body>
 <div class="menustatus"></div>
 
-<div id="mainmenu" align="left">
-    
-	<div align="center">
+<div id="mainmenu" align="left">   
 	
 		<div class="beforeTopHeader">
-			<div class="topHeader">
+
 				<ul class="nav navbar-nav">
 					<li class="text-center">
 						<a href="/Leader/index.php"><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
@@ -86,24 +84,23 @@ $(document).ready(function() {
 						<a href="#" onclick="logout()"><i class="fa fa-lg fa-sign-out"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">SIGN OUT</span></a>
 					</li>
 				</ul>
-			</div>
+			
 		</div>
-
-        <form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="<?php  echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
-        <div style="max-width:80%;">
-            <div class="input-group add-on">
-          <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
-          <div class="input-group-btn">
-            <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-          </div>
+        <div class="sch">
+        <form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="/Leader/searchResult.php" >
+            <div style="max-width:80%;">
+                <div class="input-group add-on">
+              <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+              <div class="input-group-btn">
+                <button class="btn btn-default" id="SerchButton" type="submit" ><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+            </div>
         </div>
-    </div>
-      
-        <br/>
-		<div class="spacer20"></div>
-		</form>
+          
+            </form>
+            </div>
 
-    </div>
+
     <div class="scrollcontainer scrollheight2">
         <div class="scrollpanel">
             <div id="mainmenuinner" style="max-width:1200px;width:100%">
@@ -125,10 +122,7 @@ $(document).ready(function() {
 
 </div>
 
-
 <div class="menu pointer" align="center" onclick="openmenu()">
-    <!-- <img src="/Leader/assets/images/hamburger1.png" style="width:26px;float:left;margin:13px 0px 0px 10px"> -->
-    
     <a href="#" class="bar" ><i class="fa fa-bars fa-2x" aria-hidden="true" ></i></a>
 
     <img src="/assets/images/592fabe4ab4951b364eb10eb.jpeg" class="logo-myeracademy2">
@@ -138,61 +132,25 @@ $(document).ready(function() {
 <div align="center">
 
 <div id="ddddd" style="max-width:100%;min-height:70px;border-bottom:1px solid #000;"><img src="/Leader/assets/images/592fabe4ab4951b364eb10eb.jpeg" ></div>
-<div class="beforeTopHeader">
-<div class="topHeader">
-        <ul class="nav navbar-nav">
-        <li class="text-center">
-          <a  href="/Leader/index.php" ><i class="fa fa-lg  fa-home"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">HOME</span></a>
-        </li>
-        <li class="text-center">
-          <a href="mailto:myeracademy@myer.com.au" ><i class="fa fa-lg fa-envelope-o"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">GET IN TOUCH</span></a>
-        </li>
-        <li class="text-center">
-          <a href="#" onclick="logout()"><i class="fa fa-lg fa-sign-out"></i><br><span style="text-decoration:underline;color: rgba(69, 69, 69, 0.4);">SIGN OUT</span></a>
-        </li>
-      </ul>
-      </div>
-        
-       
-        <span   class="headLine">MYER LEADERS PORTAL</span>
-               <h2  class="subtitle"> REALISE YOUR LEADERSHIP POTENTIAL</h2>
+        <div class="beforeTopHeader">
+            <span   class="headLine">MYER LEADERS PORTAL</span>
+                <h2  class="subtitle">OWN YOUR LEADERSHIP POTENTIAL</h2>
         </div>
         <form class="navbar-form" id="indexSearch" method="POST" name="indexSearch" action="<?php  echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
+       <!--This Page body search option code -->
         <div style="max-width:80%;">
-        <div class="input-group add-on">
-      <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
-      <div class="input-group-btn">
-        <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-      </div>
-    </div>
-</div>
-    <br/>
-    <div class="spacer20"></div>
+            <div class="input-group add-on">
+                <input class="form-control" placeholder="Search" name="homeSearch" id="homeSearch" type="text">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" id="homeSearchbtn" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </div>  
+    <!-- Body search option ending here -->
+        </form>
+<div >
+     
 
-    <span class="headLine2">What am I doing today ?</span>
-    <div class="spacer20"></div>
-    <p class="subtitle"style="max-width: 700px;">FILTER BY THE TYPE OF LEARNING OR CLICK ONE OF THE FOUR LEADERSHIP FOCUS AREAS TO DISCOVER MORE</p>
-    <div class="spacer20"></div>
-    
-    <div sytle="margin-bottom:20px;">
-    
-                <select id="filter" class="form-control">
-                <option value=''>FILTER BY</option>
-                        <option value='watch' >WATCH</option>
-                        <option value='LISTEN'>LISTEN</option>
-                        <option value='READ'>READ</option>
-                        <option value='READ'>DO</option>
-                        <option value='REFLECT'>REFLECT</option>
-                        
-                      </select>
-                      </div>
-  </form>
-
-
-    <div >
-   
-    
-   
    <!-- SearchResultDiv will show search result dynamically start here added by SMITA RXP-->
 <div class="SearchResultDiv" id="SearchResultDiv"></div>
 <!-- SearchResultDiv will show search result dynamically End here added by SMITA RXP-->
@@ -243,108 +201,43 @@ if(isset($_GET['fl'])){
 
         <div align="center" style="padding:7px 8px;background:#f5f5f5">
             <div style="max-width:1600px;">
-            <a href="/Leader/Leader.php?pg=LEADING SELF" >
-                <div  class="LeaderHome">
-                    <img src="/Leader/assets/images/LEADINGSELF.jpg" style="max-width:100%;">
-                </div>
-            </a> 
-            <a href="/Leader/Leader.php?pg=LEADING OTHERS">
-                <div  class="LeaderHome">
-                       <img src="/Leader/assets/images/LEADINGOTHERS.jpg" style="max-width:100%;">
-                </div>  
-            </a> 
-            <a href="/Leader/Leader.php?pg=WORKING ON THE BUSINES">
-                <div  class="LeaderHome">
-                    <img src="/Leader/assets/images/WORKINGONTHEBUSINESS.jpg" style="max-width:100%;">
-                 </div>
-            </a> 
-            <a href="/Leader/Leader.php?pg=WORKING IN THE BUSINESS">
-                <div  class="LeaderHome">
-                    <img src="/Leader/assets/images/WORKINGINTHEBUSINESS.jpg" style="max-width:100%;">
-                </div>
-            </a> 
+                <a href="/Leader/Leader.php?pg=LEADING SELF" >
+                    <div  class="LeaderHome">
+                        <img src="/Leader/assets/images/LEADINGSELF.jpg" style="max-width:100%;">
+                    </div>
+                </a> 
+                <a href="/Leader/Leader.php?pg=LEADING OTHERS">
+                    <div  class="LeaderHome">
+                        <img src="/Leader/assets/images/LEADINGOTHERS.jpg" style="max-width:100%;">
+                    </div>  
+                </a> 
+                <a href="/Leader/Leader.php?pg=WORKING ON THE BUSINES">
+                    <div  class="LeaderHome">
+                        <img src="/Leader/assets/images/WORKINGONTHEBUSINESS.jpg" style="max-width:100%;">
+                    </div>
+                </a> 
+                <a href="/Leader/Leader.php?pg=WORKING IN THE BUSINESS">
+                    <div  class="LeaderHome">
+                        <img src="/Leader/assets/images/WORKINGINTHEBUSINESS.jpg" style="max-width:100%;">
+                    </div>
+                </a> 
                 
-              </div>
-<!-- Here Comment, Rating, like and read comment Part starting -->
-<!-- 
-              <div class="aria-live-assertive" aria-live="assertive">
-</div>
-    <div class="page content-container">
-        <br/>
-        <div class="row">
-            <div class="col-md-12 text-center" id="totalLike">
-                <button id="btnlike" type="button" class="btn btn-default btn-sm">
-                    <i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i> Like
-                </button>
             </div>
+
+            </div>
+
+           
         </div>
-        <br/>
-        <div class="row">
-            <div class="col-md-12 text-center">
-            <span class="rating" id="rating">
-            <input type="radio" class="rating-input"
-                   id="rating-input-1-5" name="rating" value="5">
-            <label for="rating-input-1-5" class="rating-star"></label>
-            <input type="radio" class="rating-input"
-                   id="rating-input-1-4" name="rating" value="4">
-            <label for="rating-input-1-4" class="rating-star"></label>
-            <input type="radio" class="rating-input"
-                   id="rating-input-1-3" name="rating" value="3">
-            <label for="rating-input-1-3" class="rating-star"></label>
-            <input type="radio" class="rating-input"
-                   id="rating-input-1-2" name="rating" value="2">
-            <label for="rating-input-1-2" class="rating-star"></label>
-            <input type="radio" class="rating-input"
-                   id="rating-input-1-1" name="rating" value="1">
-            <label for="rating-input-1-1" class="rating-star"></label>
-        </span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <button id="btnwrtcmts" type="submit" value="Submit" class="button_cust">Write comments</button>
-            </div>
-            <div class="col-md-6 text-center">
-                <button id="btnrdcmts" type="submit" value="Submit" class="button_cust">Read comments</button>
-            </div>
-        </div>
-        <div class="row" id="writecommentsdiv">
-            <div class="col-md-12">
-                <textarea class="form-control" rows="5" id="comment">
-
-</textarea>
-
-            </div>
-
-            <div class="col-md-12 text-center">
-               
-                <button id="wrtcmtsubmitbtn" type="submit" value="Submit" class="button_cust">submit</button>
-                <button id="wrtcmtcancelbtn" type="submit" value="cancel" class="button_cust">cancel</button>
-            </div>
-        </div>
-        <div class="row" id="readcommentsdiv">
-    
-                <div role="region" class="article article-style-10 ">
-                <div id="readComment"></div>
-                    
-                </div>
-
-
-        </div> -->
-         
-<!-- Here Comment, Rating, like and read comment Part ending -->
-
-
-
-   <!--            
+   
          <div id="footer">
             &copy 2016 www.myeracademy.com.au<br><br>
             <img src="/Leader/assets/images/arrow_up.png" style="margin:20px 0px" class="pointer" onclick="scrolltotop()">
-        </div>  -->
-
+        </div>  
+<!-- 
 
     </div>
-</div>
+</div> -->
+
 
 <script type="application/javascript" src="/assets/js/config.js"></script>
 <script type="text/javascript" src="/Leader/assets/js/functions.js"></script>
